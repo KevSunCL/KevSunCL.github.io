@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Kun Sun - Academic Website"
+title                    : "Kun Sun"
 title_separator          : "-"
 name                     : &name "Kun Sun"
 description              : &description "Tenured Professor in Computational Linguistics | AI & Cognitive Science Researcher | Tongji University"
@@ -24,7 +24,7 @@ author:
   avatar_style     : "border-radius: 50%; width: 200px; height: 200px; object-fit: cover;"
   name             : "Kun Sun"
   pronouns         : # example: "He/him"  
-  bio              : "Tenured Professor | Computational Linguistics & AI"
+  bio              : "Tenured Full Professor"
   location         : "Shanghai, China"
   employer         : "Tongji University"
   uri              : # URL
