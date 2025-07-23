@@ -25,7 +25,7 @@ author:
   name             : "Kevin (Kun) Sun"
   pronouns         :  "He/him"  
   bio              : "Tenured Full Professor"
-  location         : "Shanghai, China"
+#  location         : "Shanghai, China"
   employer         : "Tongji University"
   uri              : # URL
   email            : "kunsun@tongji.edu.cn" # 建议用学术邮箱
