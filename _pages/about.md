@@ -42,8 +42,8 @@ I'm currently working on groundbreaking projects that combine **cognitive neuros
 
 - Large Language Model reasoning and evaluation frameworks
 - Cognitive computation models for brain-inspired AI
-- Advanced statistical approaches to linguistic phenomena using GAMM and Bayesian methods
-- Cross-linguistic studies of affective computing
+- Advanced statistical approaches to linguistic and cognitive data using GAMM and Bayesian methods
+- Cross-linguistic and multi-modal studies of affective computing
 
 ---
 
