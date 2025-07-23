@@ -197,7 +197,7 @@ Department of English, Taizhou University, Taizhou, China
 
 <div style="text-align: center; margin-top: 40px; padding: 20px; background-color: #f8f9fa; border-radius: 10px;">
   <p><em>"Bridging the gap between human cognition and artificial intelligence through computational linguistics and cognitive science."</em></p>
-  <p><strong>📧 Contact:</strong> kun.sun@tongji.edu.cn | <strong>🌐 Website:</strong> <a href="https://kevsuncl.github.io">kevsuncl.github.io</a></p>
+  <p><strong>📧 Contact:</strong> email: kunsun at tongji.edu.cn | <strong>🌐 Website:</strong> <a href="https://kevsuncl.github.io">kevsuncl.github.io</a></p>
 </div>
 
 ---
