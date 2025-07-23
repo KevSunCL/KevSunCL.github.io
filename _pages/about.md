@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a **Tenured Professor** in the School of Foreign Languages at Tongji University, where I explore the fascinating intersection of **computational linguistics**, **cognitive computation**, and **artificial intelligence**. My research bridges the gap between human language processing and machine learning, integrating statistical modeling, deep learning, and cognitive-neuroscience experimental methods to understand the deep mechanisms of language understanding and processing in both humans and machines.
+I am a **Tenured Full Professor** in the School of Foreign Languages at Tongji University, where I explore the fascinating intersection of **computational linguistics**, **cognitive computation**, and **artificial intelligence**. My research bridges the gap between human language processing and machine learning, integrating statistical modeling, deep learning, and cognitive-neuroscience experimental methods to understand the deep mechanisms of language understanding and processing in both humans and machines. I have developed a amount of specialized large language models, as well as major databases and corpora, widely used in academia and industry. As global efforts accelerate in “AI + Education", I am committed to applying data-driven approaches to advance language research toward big language science.
 
 ## Research Focus
 
@@ -29,7 +29,7 @@ My work sits at the cutting edge of **computational linguistics** and **cognitiv
 - **B.A. in English Linguistics** (minor: Statistics), Anhui Normal University (2000-2004)
 
 **Current & Previous Positions**
-- **Tenured Professor**, School of Foreign Languages, Tongji University (2025-present)
+- **Tenured Full Professor**, School of Foreign Languages, Tongji University (2025-present)
 - **Assistant Professor & Research Scientist**, University of Tübingen (2017-2025)
 
 ## Impact & Recognition
@@ -73,4 +73,4 @@ I'm currently working on groundbreaking projects that combine **cognitive neuros
 
 ---
 
-*I'm always excited to discuss research collaborations, student supervision opportunities, or innovative applications of computational linguistics. Feel free to reach out!*
+*I'm always excited to discuss research collaborations, student supervision opportunities, or innovative applications of computational linguistics. Feel free to reach out (sharpksun at hotmail.com)!*
