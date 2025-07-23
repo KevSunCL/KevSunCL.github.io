@@ -5,32 +5,160 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+{% if author.googlescholar %}
+  <div class="notice--info">
+    You can also find my articles on <a href="{{author.googlescholar}}"><u>my Google Scholar profile</u></a>.
+  </div>
 {% endif %}
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
+<h2>Selected Recent Publications</h2>
+<p><em>* indicates corresponding author</em></p>
+
+<h3>2025</h3>
+<ul>
+  <li><strong>[1]</strong> Wang, R., & <strong>Sun, K.*</strong> (2025). DSPy-based neural-symbolic pipeline to enhance spatial reasoning in LLMs. <em>Neural Networks</em> (SCI).</li>
+  
+  <li><strong>[2]</strong> <strong>Sun, K.*</strong>, & Wang, R.* (2025). A novel dependency framework for enhancing discourse data analysis. <em>Data Intelligence</em> (SCI).</li>
+  
+  <li><strong>[3]</strong> <strong>Sun, K.</strong>, Wang, R.*, & Baayen, H. (2025). Attention-aware measures of semantic relevance for predicting human reading behavior. <em>Linguistics</em> (SSCI).</li>
+  
+  <li><strong>[4]</strong> <strong>Sun, K.*</strong>, & Wang, R.* (2025). Computational sentence‐level metrics of reading speed and its ramifications for sentence comprehension. <em>Cognitive Science</em> (SCI/SSCI), e70092.</li>
+  
+  <li><strong>[5]</strong> <strong>Sun, K.*</strong, & Liu, H. (2025). Attention-aware semantic relevance predicting Chinese sentence reading. <em>Cognition</em> (SCI/SSCI), 105991.</li>
+</ul>
+
+<h3>2023</h3>
+<ul>
+  <li><strong>[6]</strong> <strong>Sun, K.*</strong>, Wang, Q., & Lu, X. (2023). An interpretable measure of semantic similarity for predicting eye movements in reading. <em>Psychonomic Bulletin & Review</em> (SSCI), 30, 1227–1242.</li>
+</ul>
+
+<h3>2022</h3>
+<ul>
+  <li><strong>[7]</strong> <strong>Sun, K.*</strong>, & Wang, R. (2022). The role of mutual information and semantic similarity in sentence processing: The case of dangling construction in Chinese. <em>Journal of Cognitive Psychology</em> (SSCI), 35(2), 142–165.</li>
+  
+  <li><strong>[8]</strong> <strong>Sun, K.</strong> (2022). Colloquialization as a key factor in historical changes of rational and emotional words. <em>Proceedings of the National Academy of Sciences</em> (PNAS) (SCI), 119(26), e2205563119. <span class="notice--success"><strong>Featured by MIT Technology Review</strong></span></li>
+  
+  <li><strong>[9]</strong> <strong>Sun, K.*</strong> & Lu, X. (2022). Predicting Chinese readers' perception of sentence boundaries in written Chinese. <em>Reading & Writing</em> (SSCI), 35, 1889–1910.</li>
+  
+  <li><strong>[10]</strong> <strong>Sun, K.*</strong> & Wang, R. (2022). Constructing a corpus of Chinese textual "run-on" sentences (CCTRS): Discourse corpus benchmark with multi-layer annotations. In <em>International Conference on Natural Language and Speech Processing</em>, ACL, 265–276.</li>
+</ul>
+
+<h3>2021</h3>
+<ul>
+  <li><strong>[11]</strong> <strong>Sun, K.*</strong>, & Wang, R.* (2021). Using the relative entropy of linguistic complexity to assess L2 language proficiency development. <em>Entropy</em> (SCI), 23(8), 1080.</li>
+  
+  <li><strong>[12]</strong> <strong>Sun, K.*</strong>, Xiong, W., & Wang, R. (2021). Investigating genre distinctions through discourse distance and discourse network. <em>Corpus Linguistics and Linguistic Theory</em> (SSCI), 17(3), 599-624.</li>
+  
+  <li><strong>[13]</strong> <strong>Sun, K.*</strong>, Liu, H., & Xiong, W. (2021). The evolutionary pattern of language in scientific writings: A case study of Philosophical Transactions of Royal Society (1665-1869). <em>Scientometrics</em> (SSCI), 1695–1724.</li>
+</ul>
+
+<h3>2020</h3>
+<ul>
+  <li><strong>[14]</strong> <strong>Sun, K.*</strong>, & Baayen, H. (2020). Hyphenation as an efficient compounding strategy in English. <em>Language Sciences</em> (SSCI), 83(1), 101326.</li>
+</ul>
+
+<h3>2019</h3>
+<ul>
+  <li><strong>[15]</strong> <strong>Sun, K.*</strong>, & Xiong, W. (2019). A computational model for measuring discourse complexity. <em>Discourse Studies</em> (SSCI), 21(6), 690-712.</li>
+  
+  <li><strong>[16]</strong> <strong>Sun, K.</strong> (2019). Teaching English-Chinese textual translation strategies: A topic-chain approach. <em>Babel: International Journal of Translation</em> (SSCI), 65(2), 286–315.</li>
+  
+  <li><strong>[17]</strong> <strong>Sun, K.</strong>, & Wang, R.* (2019). Frequency distributions of punctuation marks in English: Evidence from large-scale corpora. <em>English Today</em> (SSCI), 35(4), 23-35.</li>
+</ul>
+
+<h3>2018</h3>
+<ul>
+  <li><strong>[18]</strong> <strong>Sun, K.</strong> (2018). Approaching the double-nominal construction in Mandarin Chinese through the semantic-cognitive interaction. <em>Studia Linguistica</em> (A&HI), 72(3), 687–724.</li>
+  
+  <li><strong>[19]</strong> <strong>Sun, K.</strong> & Zhang, L.* (2018). Quantitative aspects of PDTB-style discourse relations across languages. <em>Journal of Quantitative Linguistics</em> (SSCI), 25(4), 342-371.</li>
+</ul>
+
+<hr>
+
+<h2>Chinese Publications (Selected)</h2>
+<ul>
+  <li><strong>[20]</strong> 孙坤. (2015). 中国古文特征与标点创造机理—与欧洲标点传统对比. <em>中国语文</em> (CSSCI), 2015年第6期. 
+  <br><span class="notice--info"><em>Reprinted in 人大复印资料·语言文字学, 2016年第2期; 中国社会科学文摘, 2016年第2期</em></span></li>
+  
+  <li><strong>[21]</strong> 孙坤. (2015). 汉语话题链范畴、结构与篇章功能. <em>语言教学与研究</em> (CSSCI), 2015年第5期.
+  <br><span class="notice--info"><em>Reprinted in 人大复印资料·语言文字学, 2016年第1期</em></span></li>
+  
+  <li><strong>[22]</strong> 孙坤. (2014). 汉语话题链的特点与本质. <em>汉语学习</em> (CSSCI), 2014年第5期.</li>
+  
+  <li><strong>[23]</strong> 孙坤. (2013). 话题链应用于英汉翻译模式与策略研究. <em>外语与外语教学</em> (CSSCI), 2013年第1期.</li>
+  
+  <li><strong>[24]</strong> 孙坤. (2012). 对社会科学"语言转向"现象的思考——兼论'社会科学'和'人文学科'的困境、危机与对策. <em>华南理工大学学报</em>, 2012年第5期.
+  <br><span class="notice--info"><em>Reprinted in 人大复印资料·社会科学总论, 2013年第1期</em></span></li>
+  
+  <li><strong>[25]</strong> 孙坤. (2011). 中国古代兵器英译初探：以《三国演义》英译本为例. <em>Translation Quarterly</em> (翻译季刊), 59, 51–83.</li>
+  
+  <li><strong>[26]</strong> 孙坤. (2010). 当代国外标点符号研究. <em>当代语言学</em> (CSSCI), 2010年第2期.</li>
+</ul>
+
+<hr>
+
+<h2>Important Conference Papers</h2>
+<ul>
+  <li><strong>[C1]</strong> <strong>Sun, K.</strong>, & Wang, R. (2025). Enhancing Personality Detection Models with Continuous Outputs Through Mixed Strategy Training. <em>Submitted to the 39th AAAI 2025 Conference</em> (passed first round), Feb, Philadelphia, US. <a href="https://arxiv.org/abs/2406.16223">[arXiv.2406.16223]</a></li>
+  
+  <li><strong>[C2]</strong> <strong>Sun, K.</strong>, & Wang, R. (2023). A Groundbreaking dependency framework for streamlining discourse corpora. In <em>The 18th Linguistic Annotation Workshop</em>, Dec, Malta.</li>
+  
+  <li><strong>[C3]</strong> <strong>Sun, K.</strong>, & Wang, R. (2023). Attention-aware sentence-level metrics predicting human sentence comprehension. In <em>The 5th China-Germany Intelligent Robotics Conference</em>, Nov, Tübingen. <span class="notice--success"><strong>(Keynote Speaker)</strong></span></li>
+  
+  <li><strong>[C4]</strong> <strong>Sun, K.</strong>, & Wang, R. (2022). Constructing a corpus of Chinese textual "run-on" sentences (CCTRS). In <em>5th International Conference on Natural Language and Speech Processing</em>, December, Trento, Italy. <a href="https://aclanthology.org/2022.icnlsp-1.31">[ACL Anthology]</a></li>
+  
+  <li><strong>[C5]</strong> <strong>Sun, K.</strong> & Nixon, J. (2020). Surprisal and semantic information in the prediction of language processing: Evidence from EEG data. <em>AMLaP-Asia 2020</em>, Hong Kong.</li>
+</ul>
+
+<hr>
+
+<h2>Selected Preprints & Under Review</h2>
+<div class="notice--warning">
+  <h4>Papers Under Review or In Press</h4>
+</div>
+
+<ul>
+  <li><strong>[P1]</strong> <strong>Sun, K.</strong>, & Wang, R. (2024). The roles of contextual semantic relevance metrics in human visual processing. <em>Under review by Psychological Review</em>. <a href="https://arxiv.org/abs/2403.19233">[arXiv.2403.19233]</a></li>
+  
+  <li><strong>[P2]</strong> <strong>Sun, K.</strong>, & Wang, R. (2024). Tracking neural dynamics of language comprehension: Semantic integration and lexical expectation during naturalistic discourse reading across extensive EEG channels. <em>Under review by NeuroImage</em>.</li>
+  
+  <li><strong>[P3]</strong> <strong>Sun, K.</strong>, & Wang, R. (2024). Differential contributions of machine learning and statistical analysis to language and cognitive sciences. <em>Revised version submitted to Psychological Methods</em>. <a href="https://arxiv.org/abs/2404.14052">[arXiv.2404.14052]</a></li>
+  
+  <li><strong>[P4]</strong> <strong>Sun, K.</strong>, & Wang, R. (2024). Computational sentence-level metrics for predicting human sentence comprehension. <em>Minor revisions required by Cognitive Science</em>. <a href="https://arxiv.org/abs/2403.15822">[arXiv.2403.15822]</a></li>
+  
+  <li><strong>[P5]</strong> <strong>Sun, K.</strong>, & Wang, R. (2024). Semantic relevance predicting BOLD in fMRI on human naturalistic discourse listening: Compared with surprisal and entropy reduction. <em>Submitted to Journal of Neuroscience</em>.</li>
+  
+  <li><strong>[P6]</strong> <strong>Sun, K.</strong> (2024). Optimizing predictive metrics for human language comprehension. <em>Minor revision by Computational Linguistics</em>. <a href="https://doi.org/10.1101/2023.09.03.556078">[bioRxiv]</a></li>
+  
+  <li><strong>[P7]</strong> <strong>Sun, K.</strong>, Wang, R., & Søgaard, A. (2024). Comprehensive reassessment of large-scale evaluation outcomes in LLMs: A multifaceted statistical approach. <em>Minor revisions required by Transactions of Machine Learning Research</em>. <a href="https://arxiv.org/abs/2403.15250">[arXiv.2403.15250]</a></li>
+  
+  <li><strong>[P8]</strong> Wang, R., & <strong>Sun, K.</strong> (2024). TIMIT speaker profiling: A comparison of multi-task learning and single-task learning approaches. <a href="https://arxiv.org/abs/2404.12077">[arXiv.2404.12077]</a></li>
+  
+  <li><strong>[P9]</strong> <strong>Sun, K.</strong>, & Wang, R. (2024). Automatic essay multi-dimensional scoring with fine-tuning and multiple regression. <em>Submitted to ACL 2025 Conference</em>. <a href="https://arxiv.org/abs/2406.01198">[arXiv.2406.01198]</a></li>
+  
+  <li><strong>[P10]</strong> <strong>Sun, K.</strong>, & Wang, R. (2024). Textual similarity as a key metric in machine translation quality estimation. <em>Under review by Journal of Big Data</em>. <a href="https://arxiv.org/abs/2406.07440">[arXiv.2406.07440]</a></li>
+  
+  <li><strong>[P11]</strong> Wang, R., <strong>Sun, K.</strong>, & Kuhn, J. (2024). A pipeline of neural-symbolic integration to enhance spatial reasoning in large language models. <a href="https://arxiv.org/abs/2411.18564">[arXiv.2411.18564]</a></li>
+  
+  <li><strong>[P12]</strong> <strong>Sun, K.</strong> (2024). The ebb and flow of discourse connectives: Stylistic change or cognitive decline? <em>Accepted with minor revision by Pragmatics</em>. <a href="https://doi.org/10.1101/2023.09.03.556078">[bioRxiv]</a></li>
+</ul>
+
+<hr>
+
+<div class="notice--success">
+  <h2>Publication Statistics</h2>
+  <ul>
+    <li><strong>30+</strong> peer-reviewed journal articles in international SSCI/SCI journals</li>
+    <li><strong>10+</strong> publications in Chinese CSSCI journals</li>
+    <li>Multiple articles reprinted in <em>人大复印资料</em> and <em>中国社会科学文摘</em></li>
+    <li>Research featured in <strong>MIT Technology Review</strong></li>
+  </ul>
+</div>
+
+{% if author.googlescholar %}
+<div class="notice--info">
+  <p><em>For a complete and up-to-date list of publications, please visit my <a href="{{author.googlescholar}}">Google Scholar profile</a>.</em></p>
+</div>
 {% endif %}
-
-
-
