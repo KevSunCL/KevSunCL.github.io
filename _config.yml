@@ -9,9 +9,9 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Kun Sun"
-title_separator          : "-"
-name                     : &name "Kun Sun"
+#title                    : "Kun Sun"
+#title_separator          : "-"
+name                     : &name "Kevin Sun"
 description              : &description "Tenured Professor in Computational Linguistics | AI & Cognitive Science Researcher | Tongji University"
 url                      : https://KevSunCL.github.io # the base hostname & protocol for your site
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
