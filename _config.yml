@@ -22,6 +22,7 @@ repository               : "https://kevsuncl.github.io"
 author:
   # Biographic information
   avatar           : "/images/sun.jpg"
+  avatar_style     : "border-radius: 50%; width: 200px; height: 200px; object-fit: cover;“
   name             : "Kevin (Kun) Sun"
   pronouns         : # example: "He/him"  
   bio              : "Tenured Full Professor in AI"
