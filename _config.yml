@@ -21,7 +21,7 @@ repository               : "https://kevsuncl.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "/images/Sun_K.jpg"
+  avatar           : "/images/sun.jpg"
   name             : "Kevin (Kun) Sun"
   pronouns         : # example: "He/him"  
   bio              : "Tenured Full Professor in AI"
