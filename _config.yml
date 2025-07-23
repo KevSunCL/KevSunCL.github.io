@@ -11,7 +11,7 @@ locale                   : "en-US"
 site_theme               : "default"
 #title                    : "Kevin (Kun) Sun"
 #title_separator          : "-"
-name                     : &name "Kevin Sun"
+#name                     : &name "Kevin Sun"
 description              : &description "Tenured Professor in Computational Linguistics | AI & Cognitive Science Researcher | Tongji University"
 url                      : https://KevSunCL.github.io # the base hostname & protocol for your site
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -22,7 +22,7 @@ author:
   # Biographic information
  # avatar           : "/images/sun.jpg"
  # avatar_style     : "border-radius: 50%; width: 200px; height: 200px; object-fit: cover;"
-  name             : "Kun Sun"
+  name             : "Kevin (Kun) Sun"
   pronouns         :  "He/him"  
   bio              : "Tenured Full Professor"
   location         : "Shanghai, China"
