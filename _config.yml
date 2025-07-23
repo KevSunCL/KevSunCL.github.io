@@ -9,43 +9,41 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
+title                    : "Kun Sun - Academic Website"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
-url                      : https://KevSunCL.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+name                     : &name "Kun Sun"
+description              : &description "Tenured Professor in Computational Linguistics | AI & Cognitive Science Researcher | Tongji University"
+url                      : https://KevSunCL.github.io # the base hostname & protocol for your site
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "https://kevsuncl.github.io"
+repository               : "KevSunCL/KevSunCL.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
-#               If a field is blank the icon and link will not appear, otherwise it will be shown.
-#               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
   avatar           : "/images/sun.jpg"
-  avatar_style     : "border-radius: 50%; width: 200px; height: 200px; object-fit: cover;“
-  name             : "Kevin (Kun) Sun"
+  avatar_style     : "border-radius: 50%; width: 200px; height: 200px; object-fit: cover;"
+  name             : "Kun Sun"
   pronouns         : # example: "He/him"  
-  bio              : "Tenured Full Professor in AI"
-  location         : "Earth"
+  bio              : "Tenured Professor | Computational Linguistics & AI"
+  location         : "Shanghai, China"
   employer         : "Tongji University"
   uri              : # URL
-  email            : "sharpksun@hotmail.com" 
+  email            : "kunsun@tongji.edu.cn" # 建议用学术邮箱
 
   # Academic websites
-  googlescholar    : "https://scholar.google.com/citations?user=zE_8aHUAAAAJ&hl=zh-CN&authuser=1"
+  googlescholar    : "https://scholar.google.com/citations?user=zE_8aHUAAAAJ&hl=en"
   orcid            : "https://orcid.org/0000-0001-9766-269X"
   semantic         : "https://www.semanticscholar.org/author/Kun-Sun/2018689945"
   researchgate     : "https://www.researchgate.net/profile/Kun-Sun-5"
 
   # Repositories and software development
-  github           : "https://github.com/fivehills"
-  huggingface      : "https://huggingface.co/KevSun"    
+  github           : "fivehills"  # 只需要用户名，不是完整URL
+  huggingface      : "KevSun"     # 只需要用户名
 
   # Social media
-  linkedin         : kun-sun-mlds
-  twitter          : Sharp_K_Sun
-  youtube          : englishnewsgems
-
+  linkedin         : "kun-sun-mlds"
+  twitter          : "Sharp_K_Sun"
+  youtube          : "englishnewsgems"
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
@@ -93,23 +91,21 @@ atom_feed:
   hide                   : false     # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
 
-
 # SEO Related
 google_site_verification :
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
 
-
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : &twitter "Sharp_K_Sun"
 facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+og_image                 : "/images/sun.jpg"  # Social media default site image
+og_description           : "Academic website of Kun Sun, Professor of Computational Linguistics and AI at Tongji University"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -117,13 +113,11 @@ social:
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
 
-
 # Analytics
 analytics:
   provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:
     tracking_id          :
-
 
 # Reading Files
 include:
@@ -163,14 +157,12 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-
 # Conversion
 markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
-
 
 # Markdown Processing
 kramdown:
@@ -182,7 +174,6 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-
 
 # These settings control the types of collections used by the template
 collections:
@@ -198,7 +189,6 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
-
 
 # These settings control how pages and collections are included in the site
 defaults:
@@ -256,19 +246,16 @@ defaults:
       author_profile: true
       share: true
 
-
 # Sass/SCSS
 sass:
   sass_dir: _sass
   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
-
 # Outputting
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
+timezone: Asia/Shanghai # 更改为中国时区
 
 # Plugins
 plugins:
@@ -288,35 +275,13 @@ whitelist:
   - jekyll-redirect-from
   - jemoji
 
-
 # Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
   path: /categories/
 tag_archive:
   type: liquid
   path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
-
 
 # HTML Compression
 # - http://jch.penibelst.de/
