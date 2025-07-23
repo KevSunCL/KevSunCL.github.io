@@ -20,10 +20,10 @@ repository               : "KevSunCL/KevSunCL.github.io"
 # Site Author - The following control what appear as part of the author content on the side bar.
 author:
   # Biographic information
-  avatar           : "/images/sun.jpg"
-  avatar_style     : "border-radius: 50%; width: 200px; height: 200px; object-fit: cover;"
+ # avatar           : "/images/sun.jpg"
+ # avatar_style     : "border-radius: 50%; width: 200px; height: 200px; object-fit: cover;"
   name             : "Kun Sun"
-  pronouns         : # example: "He/him"  
+  pronouns         :  "He/him"  
   bio              : "Tenured Full Professor"
   location         : "Shanghai, China"
   employer         : "Tongji University"
