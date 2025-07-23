@@ -11,9 +11,9 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D in Computational Linguistics, East China Normal University, 2012
+* M.A. in Corpus Linguistics, East China Normal University, 2007
+* B.A. in Linguistics and Statistics, Anhui Normal University, 2004
 
 Work experience
 ======
