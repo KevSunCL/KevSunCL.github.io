@@ -31,9 +31,9 @@ My research has led to **30+ peer-reviewed journal publications** in top-tier in
 
 ## Technical Expertise
 
-**Programming & Analysis**: Python (advanced), R (advanced), PyTorch (advanced), C (immediate), Linux Shell (immediate)
-**Experimental Methods**: Eye-tracking, EEG, fMRI, online experiments  
-**Languages**: Chinese (native), English (fluent), German (intermediate), Japanese (intermediate)
+-**Programming & Analysis**: Python (advanced), R (advanced), PyTorch (advanced), C (immediate), Linux Shell (immediate)
+-**Experimental Methods**: Eye-tracking, EEG, fMRI, online experiments  
+-**Languages**: Chinese (native), English (fluent), German (intermediate), Japanese (intermediate)
 
 
 ## Current Projects
