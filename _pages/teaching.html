@@ -7,194 +7,475 @@ author_profile: true
 
 {% include base_path %}
 
-<div class="notice--info">
-  <p>I have over <strong>18 years of teaching experience</strong> across multiple universities and institutions, covering a wide range of topics from computational linguistics to language pedagogy. I am passionate about integrating cutting-edge research with practical education.</p>
+<style>
+/* ── Hero banner ── */
+.teach-hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+  color: #e8e8e8;
+  padding: 2rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.teach-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(83,144,217,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.teach-hero h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 700;
+}
+.teach-hero p {
+  font-size: 0.95rem;
+  color: #93b5e1;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ── Stats row ── */
+.teach-stats {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem 0;
+  flex-wrap: wrap;
+}
+.teach-stat {
+  flex: 1;
+  min-width: 130px;
+  background: #f7f9fc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #2c5282;
+  border-radius: 6px;
+  padding: 1rem 1.1rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.teach-stat:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44,82,130,0.12);
+}
+.teach-stat .stat-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #2c5282;
+  line-height: 1.2;
+}
+.teach-stat .stat-lbl {
+  font-size: 0.78rem;
+  color: #5a6a7e;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Section title ── */
+.t-section {
+  font-size: 1.15rem;
+  color: #1a365d;
+  border-bottom: 2px solid #2c5282;
+  padding-bottom: 0.4rem;
+  margin: 2rem 0 1rem 0;
+  display: inline-block;
+}
+
+/* ── Course cards ── */
+.course-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.2rem 0 2rem 0;
+}
+@media (max-width: 700px) {
+  .course-grid { grid-template-columns: 1fr; }
+}
+.course-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.2rem 1.3rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.course-card .cc-semester {
+  display: inline-block;
+  background: #ebf4ff;
+  color: #2c5282;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.course-card h4 {
+  margin: 0 0 0.4rem 0;
+  font-size: 0.95rem;
+  color: #1a365d;
+}
+.course-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+/* ── Timeline ── */
+.teach-timeline {
+  position: relative;
+  padding-left: 28px;
+  margin: 1rem 0 2rem 0;
+}
+.teach-timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background: linear-gradient(to bottom, #2c5282, #93b5e1, #cbd5e0);
+}
+.tl-block {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.tl-block::before {
+  content: '';
+  position: absolute;
+  left: -24px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #2c5282;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #2c5282;
+}
+.tl-block.current::before {
+  background: #38a169;
+  box-shadow: 0 0 0 2px #38a169;
+}
+.tl-block .tl-head {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1a202c;
+  margin-bottom: 0.1rem;
+}
+.tl-block .tl-sub {
+  font-size: 0.85rem;
+  color: #5a6a7e;
+  margin-bottom: 0.8rem;
+}
+.tl-block .tl-courses {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.tl-block .tl-courses li {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 1.2rem;
+  font-size: 0.88rem;
+  color: #2d3748;
+  border-bottom: 1px solid #f0f0f0;
+}
+.tl-block .tl-courses li:last-child {
+  border-bottom: none;
+}
+.tl-block .tl-courses li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #2c5282;
+  font-weight: 700;
+}
+.tl-block .tl-courses li em {
+  display: block;
+  font-size: 0.8rem;
+  color: #718096;
+  margin-top: 0.15rem;
+}
+
+/* ── Badge row ── */
+.teach-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.8rem 0 1.5rem 0;
+}
+.t-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #edf2f7;
+  border: 1px solid #cbd5e0;
+  border-radius: 20px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.82rem;
+  color: #2d3748;
+  font-weight: 500;
+}
+.t-badge .t-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.t-dot-gold { background: #d69e2e; }
+.t-dot-blue { background: #2c5282; }
+.t-dot-green { background: #38a169; }
+
+/* ── Philosophy cards ── */
+.phil-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 1.2rem 0 2rem 0;
+}
+@media (max-width: 800px) {
+  .phil-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 500px) {
+  .phil-grid { grid-template-columns: 1fr; }
+}
+.phil-card {
+  background: #f7f9fc;
+  border: 1px solid #e2e8f0;
+  border-top: 3px solid #2c5282;
+  border-radius: 0 0 8px 8px;
+  padding: 1rem 1.1rem;
+  text-align: center;
+}
+.phil-card .phil-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+.phil-card h4 {
+  margin: 0 0 0.3rem 0;
+  font-size: 0.88rem;
+  color: #1a365d;
+}
+.phil-card p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #4a5568;
+  line-height: 1.45;
+}
+
+/* ── CTA box ── */
+.teach-cta {
+  background: linear-gradient(135deg, #ebf4ff 0%, #f0f7ff 100%);
+  border: 1px solid #bee3f8;
+  border-radius: 8px;
+  padding: 1.3rem 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+.teach-cta p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #2d3748;
+  line-height: 1.6;
+  font-style: italic;
+}
+</style>
+
+<!-- ═══════════ HERO BANNER ═══════════ -->
+<div class="teach-hero">
+  <h2>🎓 Teaching & Mentorship</h2>
+  <p>Over <strong style="color:#fff;">18 years of teaching experience</strong> across multiple universities and countries, covering computational linguistics, NLP, digital humanities, and language pedagogy. Passionate about integrating cutting-edge research with practical education.</p>
 </div>
 
-<h2>🎓 Current Teaching (2025-present)</h2>
-
-<div class="archive__item">
-  <h3>Tongji University - School of Foreign Languages</h3>
-  <div class="archive__item-body">
-    <p><strong>Position:</strong> Tenured Professor</p>
-    <p><em>Courses and teaching responsibilities to be updated as they are assigned...</em></p>
+<!-- ═══════════ STATS ═══════════ -->
+<div class="teach-stats">
+  <div class="teach-stat">
+    <div class="stat-num">18+</div>
+    <div class="stat-lbl">Years Teaching</div>
+  </div>
+  <div class="teach-stat">
+    <div class="stat-num">50+</div>
+    <div class="stat-lbl">Students Supervised</div>
+  </div>
+  <div class="teach-stat">
+    <div class="stat-num">3</div>
+    <div class="stat-lbl">Universities</div>
+  </div>
+  <div class="teach-stat">
+    <div class="stat-num">2</div>
+    <div class="stat-lbl">Countries</div>
   </div>
 </div>
 
-<hr>
+<!-- ═══════════ CURRENT TEACHING ═══════════ -->
+<h2 class="t-section">🏫 Current Teaching — Tongji University (2025/2026)</h2>
 
-<h2>📚 Previous Teaching Experience</h2>
+<div class="course-grid">
+  <div class="course-card">
+    <span class="cc-semester">Winter & Summer</span>
+    <h4>Introduction to Computational Linguistics</h4>
+    <p>Foundational course covering core concepts in computational approaches to language, including formal grammars, statistical methods, and language modeling.</p>
+  </div>
+  <div class="course-card">
+    <span class="cc-semester">Winter & Summer</span>
+    <h4>Advanced Natural Language Processing</h4>
+    <p>Advanced topics in NLP including transformer architectures, large language models, sequence labeling, and multi-modal language understanding.</p>
+  </div>
+  <div class="course-card">
+    <span class="cc-semester">Winter & Summer</span>
+    <h4>Methods in Language Sciences</h4>
+    <p>Research methodology for language sciences covering experimental design, statistical analysis (GAMM, Bayesian), eye-tracking, and corpus methods.</p>
+  </div>
+  <div class="course-card">
+    <span class="cc-semester">Winter & Summer</span>
+    <h4>Project-based Digital Humanities</h4>
+    <p>Hands-on project course applying computational methods to humanities research, including distant reading, text mining, and data visualization.</p>
+  </div>
+</div>
 
-<div class="archive__item">
-  <h3>University of Tübingen, Germany (2017-2025)</h3>
-  <div class="archive__item-body">
-    <p><strong>Position:</strong> Assistant Professor & Research Scientist</p>
-    <p><strong>Department:</strong> Computational Linguistics</p>
-    
-    <h4>Courses Taught:</h4>
-    <ul>
-      <li><strong>Transformer-based Language Models</strong> (2023 Winter Semester)
-        <br><em>Advanced course covering the latest developments in large language models, attention mechanisms, and neural architectures</em></li>
-      
-      <li><strong>Quantitative Methods in Experimental Linguistics</strong> (2022 Summer Semester)
-        <br><em>Statistical methods, experimental design, and data analysis techniques for linguistic research</em></li>
-      
-      <li><strong>Language Changes & Variations</strong> (2021 Summer Semester)
-        <br><em>Historical linguistics, sociolinguistics, and computational approaches to language change</em></li>
-      
-      <li><strong>Computational Models in Linguistic Research</strong> (2020 & 2021 Summer Semesters)
-        <br><em>Introduction to computational approaches in linguistics, including machine learning and statistical modeling</em></li>
-      
-      <li><strong>Text Linguistics and Discourse Processes</strong> (2019/2020 Winter Semester)
-        <br><em>Advanced course on discourse analysis, text processing, and computational discourse modeling</em></li>
+<!-- ═══════════ TEACHING HISTORY TIMELINE ═══════════ -->
+<h2 class="t-section">📚 Teaching History</h2>
+
+<div class="teach-timeline">
+
+  <div class="tl-block current">
+    <div class="tl-head">Tongji University, China</div>
+    <div class="tl-sub">Tenured Professor · School of Foreign Languages · 2025–present</div>
+    <ul class="tl-courses">
+      <li><strong>Introduction to Computational Linguistics</strong><em>Core concepts in computational approaches to language analysis</em></li>
+      <li><strong>Advanced Natural Language Processing</strong><em>Transformer architectures, LLMs, and multi-modal language understanding</em></li>
+      <li><strong>Methods in Language Sciences</strong><em>Experimental design, statistical analysis, eye-tracking, and corpus methods</em></li>
+      <li><strong>Project-based Digital Humanities</strong><em>Hands-on computational methods applied to humanities research</em></li>
     </ul>
-    
-    <div class="notice--success">
-      <p><strong>Teaching Philosophy:</strong> Integrating cutting-edge research with practical applications, emphasizing hands-on experience with computational tools and statistical methods.</p>
-    </div>
   </div>
-</div>
 
-<div class="archive__item">
-  <h3>Zhejiang International Studies University (2013-2016)</h3>
-  <div class="archive__item-body">
-    <p><strong>Position:</strong> Associate Professor</p>
-    <p><strong>Department:</strong> English Department</p>
-    
-    <h4>Courses Taught:</h4>
-    <ul>
-      <li><strong>Contrastive Analysis of Chinese and English</strong> (2013, 2014, 2015 Winter Semesters)
-        <br><em>Comparative linguistics focusing on structural and functional differences between Chinese and English</em></li>
-      
-      <li><strong>Computer-aided Translation</strong> (2015, 2016 Spring Semesters)
-        <br><em>Introduction to translation technology, CAT tools, and computational approaches to translation</em></li>
-      
-      <li><strong>English Reading & Writing</strong> (2014, 2015, 2016 Spring/Winter Semesters)
-        <br><em>Advanced English language skills with focus on academic writing and critical reading</em></li>
-      
-      <li><strong>Corpus Linguistics</strong> (2016 Spring Semester)
-        <br><em>Introduction to corpus methods, statistical analysis of linguistic data, and corpus tools</em></li>
-      
-      <li><strong>Language and Society</strong> (2015, 2016 Winter Semesters)
-        <br><em>Sociolinguistics, language variation, and the social aspects of language use</em></li>
+  <div class="tl-block">
+    <div class="tl-head">University of Tübingen, Germany</div>
+    <div class="tl-sub">Assistant Professor & Research Scientist · Computational Linguistics · 2017–2025</div>
+    <ul class="tl-courses">
+      <li><strong>Transformer-based Language Models</strong> (2023 Winter)<em>Large language models, attention mechanisms, and neural architectures</em></li>
+      <li><strong>Quantitative Methods in Experimental Linguistics</strong> (2022 Summer)<em>Statistical methods, experimental design, and data analysis for linguistic research</em></li>
+      <li><strong>Language Changes & Variations</strong> (2021 Summer)<em>Historical linguistics, sociolinguistics, and computational approaches to language change</em></li>
+      <li><strong>Computational Models in Linguistic Research</strong> (2020 & 2021 Summer)<em>Machine learning and statistical modeling for linguistics</em></li>
+      <li><strong>Text Linguistics and Discourse Processes</strong> (2019/2020 Winter)<em>Discourse analysis, text processing, and computational discourse modeling</em></li>
     </ul>
   </div>
+
+  <div class="tl-block">
+    <div class="tl-head">Zhejiang International Studies University, China</div>
+    <div class="tl-sub">Associate Professor · English Department · 2013–2016</div>
+    <ul class="tl-courses">
+      <li><strong>Contrastive Analysis of Chinese and English</strong> (2013–2015 Winter)<em>Structural and functional differences between Chinese and English</em></li>
+      <li><strong>Computer-aided Translation</strong> (2015–2016 Spring)<em>Translation technology, CAT tools, and computational approaches</em></li>
+      <li><strong>Corpus Linguistics</strong> (2016 Spring)<em>Corpus methods, statistical analysis, and corpus tools</em></li>
+      <li><strong>Language and Society</strong> (2015–2016 Winter)<em>Sociolinguistics, language variation, and social aspects of language</em></li>
+      <li><strong>English Reading & Writing</strong> (2014–2016)<em>Academic writing and critical reading skills</em></li>
+    </ul>
+  </div>
+
+  <div class="tl-block">
+    <div class="tl-head">Taizhou University, China</div>
+    <div class="tl-sub">Lecturer · English Department · 2007–2013</div>
+    <ul class="tl-courses">
+      <li><strong>Introduction to Linguistics</strong> (2008–2009 Spring)<em>Phonetics, phonology, morphology, syntax, and semantics</em></li>
+      <li><strong>L2 Learning Strategies</strong> (2007–2008 Winter)<em>Second language acquisition theories and practical learning strategies</em></li>
+      <li><strong>English Reading & Writing</strong> (2007–2009)<em>Core English language skills for undergraduates</em></li>
+    </ul>
+  </div>
+
 </div>
 
-<div class="archive__item">
-  <h3>Taizhou University (2007-2013)</h3>
-  <div class="archive__item-body">
-    <p><strong>Position:</strong> Lecturer</p>
-    <p><strong>Department:</strong> English Department</p>
-    
-    <h4>Courses Taught:</h4>
-    <ul>
-      <li><strong>Introduction to Linguistics</strong> (2008, 2009 Spring Semesters)
-        <br><em>Foundational course covering phonetics, phonology, morphology, syntax, and semantics</em></li>
-      
-      <li><strong>English Reading & Writing</strong> (2007, 2008, 2009 Spring/Winter Semesters)
-        <br><em>Core English language skills development for undergraduate students</em></li>
-      
-      <li><strong>L2 Learning Strategies</strong> (2007, 2008 Winter Semesters)
-        <br><em>Second language acquisition theories and practical learning strategies</em></li>
-    </ul>
+<!-- ═══════════ STUDENT SUPERVISION ═══════════ -->
+<h2 class="t-section">👨‍🎓 Student Supervision</h2>
+
+<div class="teach-stats">
+  <div class="teach-stat">
+    <div class="stat-num">50+</div>
+    <div class="stat-lbl">BA & MA Students</div>
+  </div>
+  <div class="teach-stat">
+    <div class="stat-num">2</div>
+    <div class="stat-lbl">PhD Co-supervised</div>
   </div>
 </div>
 
-<hr>
+**Recent Thesis Topics Supervised:**
+- Computational approaches to Chinese discourse structure
+- Machine learning methods in translation quality assessment
+- Cross-linguistic analysis of discourse markers
+- Corpus-based studies of language variation
+- Statistical modeling of psycholinguistic phenomena
 
-<h2>👨‍🎓 Student Supervision</h2>
+<!-- ═══════════ AWARDS ═══════════ -->
+<h2 class="t-section">🏆 Teaching Recognition</h2>
 
-<div class="notice--warning">
-  <h3>Graduate Student Supervision</h3>
-  <ul>
-    <li><strong>50+ Bachelor and Master students</strong> supervised since 2010</li>
-    <li><strong>2 PhD students</strong> co-supervised - 2019-2024</li>
-    <li>Research areas: Computational linguistics, discourse analysis, corpus linguistics, translation studies</li>
-  </ul>
+<div class="teach-badges">
+  <span class="t-badge"><span class="t-dot t-dot-gold"></span>"The Outstanding Teacher" · Zhejiang ISU (2014)</span>
+  <span class="t-badge"><span class="t-dot t-dot-gold"></span>Second Prize "Teaching Achievement" · Zhejiang ISU (2016)</span>
+  <span class="t-badge"><span class="t-dot t-dot-gold"></span>"Advanced Research Worker" · Zhejiang ISU (2015–2017)</span>
 </div>
 
-<h3>Recent Thesis Topics Supervised:</h3>
-<ul>
-  <li>Computational approaches to Chinese discourse structure</li>
-  <li>Machine learning methods in translation quality assessment</li>
-  <li>Cross-linguistic analysis of discourse markers</li>
-  <li>Corpus-based studies of language variation</li>
-  <li>Statistical modeling of psycholinguistic phenomena</li>
-</ul>
+**Academic Service & Organization:**
+- **Conference Organizer:** International Morphological Processing Conference, Tübingen (November 2019)
+- **Academic Forum Organizer:** Zhejiang International Studies University (2013–2016)
+- **Temporary Coordinator:** Collaborative Innovation Center, Zhejiang University (2016–2017)
 
-<hr>
+<!-- ═══════════ TEACHING PHILOSOPHY ═══════════ -->
+<h2 class="t-section">📖 Teaching Philosophy</h2>
 
-<h2>🏆 Teaching Recognition & Service</h2>
-
-<div class="archive__item">
-  <h3>Awards & Recognition</h3>
-  <div class="archive__item-body">
-    <ul>
-      <li><strong>"The Outstanding Teacher"</strong> - Zhejiang International Studies University (2014)</li>
-      <li><strong>Second Prize of "Teaching Achievement"</strong> - Zhejiang International Studies University (2016)</li>
-      <li><strong>"Advanced Research Worker" Award</strong> - Zhejiang International Studies University (2015-2017)</li>
-    </ul>
+<div class="phil-grid">
+  <div class="phil-card">
+    <div class="phil-icon">🔬</div>
+    <h4>Research-Informed</h4>
+    <p>Integrating the latest research findings directly into classroom instruction</p>
+  </div>
+  <div class="phil-card">
+    <div class="phil-icon">🛠️</div>
+    <h4>Hands-on Learning</h4>
+    <p>Practical skills with Python, R, and specialized computational tools</p>
+  </div>
+  <div class="phil-card">
+    <div class="phil-icon">🧩</div>
+    <h4>Interdisciplinary</h4>
+    <p>Combining linguistics, computer science, and cognitive science</p>
+  </div>
+  <div class="phil-card">
+    <div class="phil-icon">💡</div>
+    <h4>Critical Thinking</h4>
+    <p>Encouraging students to question assumptions and think analytically</p>
+  </div>
+  <div class="phil-card">
+    <div class="phil-icon">🌍</div>
+    <h4>International</h4>
+    <p>Drawing from experience across multiple educational systems and cultures</p>
+  </div>
+  <div class="phil-card">
+    <div class="phil-icon">🤝</div>
+    <h4>Collaborative</h4>
+    <p>Team-based projects mirroring professional research environments</p>
   </div>
 </div>
 
-<div class="archive__item">
-  <h3>Academic Service & Organization</h3>
-  <div class="archive__item-body">
-    <ul>
-      <li><strong>Conference Organizer:</strong> International Morphological Processing Conference, Tübingen (November 2019)</li>
-      <li><strong>Academic Forum Organizer:</strong> Zhejiang International Studies University (2013-2016)</li>
-      <li><strong>Temporary Coordinator:</strong> Collaborative Innovation Center, Zhejiang University (2016-2017)</li>
-    </ul>
-  </div>
-</div>
+<!-- ═══════════ FUTURE GOALS ═══════════ -->
+<h2 class="t-section">🎯 Future Teaching Goals</h2>
 
-<hr>
+- Developing new courses on **Large Language Models and AI Ethics**
+- Creating interdisciplinary programs bridging **linguistics and artificial intelligence**
+- Establishing international collaboration programs with European and North American universities
+- Mentoring the next generation of computational linguists and AI researchers
+- Promoting **open science** practices in linguistic education
 
-<h2>📖 Teaching Philosophy & Approach</h2>
-
-<div class="notice--success">
-  <h3>Core Principles</h3>
-  <ul>
-    <li><strong>Research-Informed Teaching:</strong> Integrating latest research findings into classroom instruction</li>
-    <li><strong>Hands-on Learning:</strong> Emphasis on practical skills with computational tools and statistical software</li>
-    <li><strong>Critical Thinking:</strong> Encouraging students to question assumptions and develop analytical skills</li>
-    <li><strong>Interdisciplinary Approach:</strong> Combining linguistics, computer science, and cognitive science perspectives</li>
-    <li><strong>International Perspective:</strong> Drawing from experience across multiple educational systems and cultures</li>
-  </ul>
-</div>
-
-<div class="archive__item">
-  <h3>Innovative Teaching Methods</h3>
-  <div class="archive__item-body">
-    <ul>
-      <li><strong>Computational Workshops:</strong> Hands-on sessions with Python, R, and specialized linguistics software</li>
-      <li><strong>Real Data Analysis:</strong> Using authentic linguistic corpora and datasets in coursework</li>
-      <li><strong>Collaborative Projects:</strong> Team-based research projects that mirror professional research environments</li>
-      <li><strong>Technology Integration:</strong> Utilizing cutting-edge tools like transformer models and statistical packages</li>
-      <li><strong>Multilingual Perspectives:</strong> Incorporating cross-linguistic examples and comparative approaches</li>
-    </ul>
-  </div>
-</div>
-
-<hr>
-
-<h2>🎯 Future Teaching Goals</h2>
-
-<div class="notice--info">
-  <p>As I begin my new position at Tongji University, I look forward to:</p>
-  <ul>
-    <li>Developing new courses on <strong>Large Language Models and AI Ethics</strong></li>
-    <li>Creating interdisciplinary programs bridging <strong>linguistics and artificial intelligence</strong></li>
-    <li>Establishing international collaboration programs with European and North American universities</li>
-    <li>Mentoring the next generation of computational linguists and AI researchers</li>
-    <li>Promoting <strong>open science</strong> practices in linguistic education</li>
-  </ul>
-</div>
-
-<hr>
-
-<div class="notice--success">
-  <p><em>"Teaching is not just about transmitting knowledge, but about inspiring curiosity and developing critical thinking skills that will serve students throughout their careers. My goal is to prepare students for the rapidly evolving landscape of computational linguistics and AI."</em></p>
-  <p style="text-align: right;"><strong>- Kun Sun</strong></p>
+<!-- ═══════════ CTA ═══════════ -->
+<div class="teach-cta">
+  <p>"Teaching is not just about transmitting knowledge, but about inspiring curiosity and developing critical thinking skills that will serve students throughout their careers. My goal is to prepare students for the rapidly evolving landscape of computational linguistics and AI."</p>
+  <p style="margin-top: 0.5rem; font-style: normal; font-weight: 700; color: #1a365d;">— Kun Sun</p>
 </div>
