@@ -305,7 +305,7 @@ My work sits at the cutting edge of **computational linguistics** and **cognitiv
   <div class="research-card">
     <div class="card-icon">📊</div>
     <h4>Advanced Statistical Analysis</h4>
-    <p>Applying sophisticated statistical methods including GAMM, Bayesian modeling, and time-series analysis to linguistic and cognitive phenomena.</p>
+    <p>Applying sophisticated statistical methods including GAMM, Bayesian modeling, and time-series analysis to linguistic and cognitive phenomena, as well as neuro data (EEG and fMRI).</p>
   </div>
   <div class="research-card">
     <div class="card-icon">📜</div>
