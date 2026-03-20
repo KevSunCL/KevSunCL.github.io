@@ -11,13 +11,14 @@ redirect_from:
 <style>
 /* ── Hero banner ── */
 .hero-banner {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
-  color: #e8e8e8;
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 40%, #7dd3fc 100%);
+  color: #0c4a6e;
   padding: 2rem 2rem;
   border-radius: 10px;
   margin-bottom: 2rem;
   position: relative;
   overflow: hidden;
+  border: 1px solid #7dd3fc;
 }
 .hero-banner::before {
   content: '';
@@ -26,25 +27,25 @@ redirect_from:
   right: -20%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(83,144,217,0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, transparent 70%);
   border-radius: 50%;
 }
 .hero-banner h2 {
   margin: 0 0 0.3rem 0;
   font-size: 1.4rem;
-  color: #fff;
+  color: #0c4a6e;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
 .hero-banner .hero-subtitle {
   font-size: 1.05rem;
-  color: #93b5e1;
+  color: #075985;
   margin-bottom: 0.2rem;
   font-weight: 500;
 }
 .hero-banner .hero-affiliation {
   font-size: 0.92rem;
-  color: #a8bdd4;
+  color: #0369a1;
 }
 
 /* ── Stats row ── */
@@ -309,7 +310,7 @@ My work sits at the cutting edge of **computational linguistics** and **cognitiv
   <div class="research-card">
     <div class="card-icon">📜</div>
     <h4>Digital Humanities & Computational Text Analysis</h4>
-    <p>Formal and computational models of discourse structure; computational measurement of coherence, cohesion, and information; discourse dependency and cross-framework conversion (RST, PDTB, dependency); multilingual discourse parsing; distant reading.</p>
+    <p>Formal and computational models of discourse structure; computational measurement of coherence, cohesion, and information flow; graph-based and network representations of discourse; discourse dependency and cross-framework conversion (RST, PDTB, dependency); multilingual discourse parsing; distant reading and large-scale diachronic analysis of literary and scholarly texts; computational modeling of lexical semantic change and language evolution.</p>
   </div>
   <div class="research-card">
     <div class="card-icon">⚖️</div>
