@@ -7,194 +7,677 @@ author_profile: true
 
 {% include base_path %}
 
-<div class="notice--info">
-  <p>I am committed to <strong>open science</strong> and have developed numerous computational tools, databases, and resources for the research community. All software and datasets are freely available for academic use.</p>
+<style>
+/* ── Hero — circuit-board tech feel ── */
+.sw-hero {
+  background: linear-gradient(145deg, #1e293b 0%, #0f172a 60%, #1e1b4b 100%);
+  color: #cbd5e1;
+  padding: 2.2rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #334155;
+}
+.sw-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(99,102,241,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(14,165,233,0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+.sw-hero::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; width: 200px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 18px,
+    rgba(99,102,241,0.06) 18px,
+    rgba(99,102,241,0.06) 19px
+  );
+  pointer-events: none;
+}
+.sw-hero h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+  color: #f1f5f9;
+  font-weight: 700;
+  position: relative;
+}
+.sw-hero p {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.65;
+  position: relative;
+}
+.sw-hero strong {
+  color: #a5b4fc;
+}
+
+/* ── Section header — indigo accent ── */
+.sw-section {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #1e293b;
+  padding: 0.5rem 0 0.5rem 1rem;
+  margin: 2.2rem 0 1rem 0;
+  border-left: 4px solid #6366f1;
+  background: linear-gradient(90deg, #eef2ff 0%, transparent 100%);
+  letter-spacing: 0.3px;
+}
+
+/* ── Impact counters ── */
+.sw-counters {
+  display: flex;
+  gap: 0.7rem;
+  margin: 1.5rem 0 2rem 0;
+  flex-wrap: wrap;
+}
+.sw-counter {
+  flex: 1;
+  min-width: 120px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-top: 3px solid #6366f1;
+  border-radius: 0 0 6px 6px;
+  padding: 0.9rem 0.8rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.sw-counter:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99,102,241,0.12);
+}
+.sw-counter .cnt-num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #4f46e5;
+  line-height: 1.2;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+.sw-counter .cnt-lbl {
+  font-size: 0.7rem;
+  color: #64748b;
+  margin-top: 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+/* ── Tool card — repo style ── */
+.tool-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.1rem 1.3rem;
+  margin-bottom: 0.7rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+.tool-card:hover {
+  border-color: #6366f1;
+  box-shadow: 0 4px 14px rgba(99,102,241,0.08);
+}
+.tool-card .tc-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+.tool-card .tc-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.tc-icon-purple { background: #eef2ff; border: 1px solid #c7d2fe; }
+.tc-icon-blue { background: #eff6ff; border: 1px solid #bfdbfe; }
+.tc-icon-green { background: #ecfdf5; border: 1px solid #a7f3d0; }
+.tc-icon-amber { background: #fffbeb; border: 1px solid #fde68a; }
+.tc-icon-rose { background: #fff1f2; border: 1px solid #fecdd3; }
+
+.tool-card .tc-name {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #1e293b;
+}
+.tool-card .tc-desc {
+  font-size: 0.83rem;
+  color: #64748b;
+  line-height: 1.55;
+  margin-bottom: 0.5rem;
+}
+.tool-card .tc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.tc-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  font-weight: 500;
+}
+.tc-tag-lang { background: #eef2ff; color: #4338ca; border: 1px solid #c7d2fe; }
+.tc-tag-fw { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
+.tc-tag-use { background: #f8fafc; color: #475569; border: 1px solid #e2e8f0; }
+
+/* ── Download / Impact badge ── */
+.tc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  margin-left: 0.4rem;
+}
+.badge-dl { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+.badge-pub { background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; }
+.badge-star { background: #ede9fe; color: #5b21b6; border: 1px solid #c4b5fd; }
+
+/* ── Database / Corpus card — horizontal ── */
+.db-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  transition: border-color 0.2s;
+}
+.db-card:hover { border-color: #6366f1; }
+.db-card .db-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+}
+.db-card .db-body {
+  flex: 1;
+}
+.db-card .db-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #1e293b;
+  margin-bottom: 0.2rem;
+}
+.db-card .db-desc {
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+.db-card .db-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.35rem;
+}
+
+/* ── Tech stack grid ── */
+.tech-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.6rem;
+  margin: 1rem 0 1.5rem 0;
+}
+@media (max-width: 650px) {
+  .tech-grid { grid-template-columns: 1fr 1fr; }
+}
+.tech-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+}
+.tech-box .tb-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6366f1;
+  margin-bottom: 0.35rem;
+}
+.tech-box .tb-items {
+  font-size: 0.82rem;
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* ── Link cards ── */
+.sw-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+@media (max-width: 650px) {
+  .sw-links { grid-template-columns: 1fr 1fr; }
+}
+.sw-link {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.9rem 0.8rem;
+  text-align: center;
+  text-decoration: none;
+  color: #1e293b;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: border-color 0.2s, transform 0.2s;
+  display: block;
+}
+.sw-link:hover {
+  border-color: #6366f1;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.sw-link .sl-icon {
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.sw-link .sl-sub {
+  font-size: 0.7rem;
+  color: #64748b;
+  font-weight: 400;
+}
+
+/* ── CTA ── */
+.sw-cta {
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 1.3rem 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+.sw-cta strong { color: #a5b4fc; }
+.sw-cta em { color: #cbd5e1; }
+</style>
+
+<!-- ═══════════ HERO ═══════════ -->
+<div class="sw-hero">
+  <h2>⚙️ Software, Tools & Resources</h2>
+  <p>Committed to <strong>open science</strong> — building computational tools, fine-tuned models, multilingual databases, and specialized corpora for the research community. All resources are freely available for academic use.</p>
 </div>
 
-<h2>🛠️ Software & Computational Tools</h2>
-
-<div class="archive__item">
-  <h3>Discourse Analysis Tools</h3>
-  <div class="archive__item-body">
-    <ul>
-      <li><strong>Automatic Discourse Dependency Converter</strong>
-        <br><em>A tool for converting discourse dependency structures from various discourse corpora formats</em>
-        <br>🔧 <strong>Technologies:</strong> Python, NLP Libraries
-        <br>📊 <strong>Use Case:</strong> Discourse parsing and analysis across multiple languages</li>
-      
-      <li><strong>Discourse Complexity Analyzer</strong>
-        <br><em>Computational tool for measuring discourse complexity at syntactic and discourse levels</em>
-        <br>🔧 <strong>Technologies:</strong> Python, Statistical Modeling
-        <br>📊 <strong>Use Case:</strong> Automated assessment of text complexity</li>
-      
-      <li><strong>Unified PDTB and RST Annotation Tool</strong>
-        <br><em>Mining tool for Penn Discourse TreeBank (PDTB) and Rhetorical Structure Theory (RST) corpora</em>
-        <br>🔧 <strong>Technologies:</strong> Python, XML Processing
-        <br>📊 <strong>Use Case:</strong> Discourse relation annotation and extraction</li>
-      
-      <li><strong>Discourse Network Visualization Toolkit</strong>
-        <br><em>Interactive visualization tool for discourse networks and relationships</em>
-        <br>🔧 <strong>Technologies:</strong> Python, D3.js, NetworkX
-        <br>📊 <strong>Use Case:</strong> Visual analysis of discourse structures</li>
-    </ul>
+<!-- ═══════════ IMPACT STATS ═══════════ -->
+<div class="sw-counters">
+  <div class="sw-counter">
+    <div class="cnt-num">160K+</div>
+    <div class="cnt-lbl">HuggingFace Downloads</div>
+  </div>
+  <div class="sw-counter">
+    <div class="cnt-num">30+</div>
+    <div class="cnt-lbl">Open-Source Tools</div>
+  </div>
+  <div class="sw-counter">
+    <div class="cnt-num">15+</div>
+    <div class="cnt-lbl">Corpora & Databases</div>
+  </div>
+  <div class="sw-counter">
+    <div class="cnt-num">28+</div>
+    <div class="cnt-lbl">Languages Supported</div>
+  </div>
+  <div class="sw-counter">
+    <div class="cnt-num">11+</div>
+    <div class="cnt-lbl">Discourse Languages</div>
   </div>
 </div>
 
-<div class="archive__item">
-  <h3>Computational Linguistics Metrics</h3>
-  <div class="archive__item-body">
-    <ul>
-      <li><strong>Attention-Aware Computational Measures Toolkit</strong>
-        <br><em>Advanced toolkit for computing attention-aware metrics for multiple languages</em>
-        <br>🔧 <strong>Technologies:</strong> Python, PyTorch, Transformers
-        <br>📊 <strong>Use Case:</strong> Predicting human reading behavior and cognitive processing
-        <br><span class="notice--success">🏆 <strong>Featured Research:</strong> Published in <em>Cognition</em> and <em>Linguistics</em></span></li>
-      
-      <li><strong>Enhanced Computational Measures Toolkit</strong>
-        <br><em>Comprehensive suite of enhanced computational measures for multilingual analysis</em>
-        <br>🔧 <strong>Technologies:</strong> Python, Advanced NLP
-        <br>📊 <strong>Use Case:</strong> Cross-linguistic computational analysis</li>
-    </ul>
+<!-- ═══════════ FINE-TUNED LLMs ═══════════ -->
+<div class="sw-section">🤖 Fine-tuned Large Language Models</div>
+
+<div class="tool-card">
+  <div class="tc-header">
+    <div class="tc-icon tc-icon-purple">🧠</div>
+    <div class="tc-name">Personality Detection LLMs <span class="tc-badge badge-dl">⬇ 160K+ downloads</span></div>
+  </div>
+  <div class="tc-desc">Fine-tuned language models for detecting Big Five personality traits from text. State-of-the-art accuracy on multiple benchmarks.</div>
+  <div class="tc-tags">
+    <span class="tc-tag tc-tag-lang">PyTorch</span>
+    <span class="tc-tag tc-tag-fw">Transformers</span>
+    <span class="tc-tag tc-tag-fw">BERT/RoBERTa</span>
+    <span class="tc-tag tc-tag-use">Psychology · HR · Social Media</span>
+  </div>
+  <p style="margin: 0.4rem 0 0; font-size: 0.82rem;">🔗 <a href="https://huggingface.co/KevSun/Personality_LM" style="color: #4f46e5; font-weight: 600;">HuggingFace Hub →</a></p>
+</div>
+
+<div class="tool-card">
+  <div class="tc-header">
+    <div class="tc-icon tc-icon-green">💚</div>
+    <div class="tc-name">Mental Health Detection Models</div>
+  </div>
+  <div class="tc-desc">Specialized LLMs for detecting mental health indicators from text and social media posts. Designed for clinical and research applications.</div>
+  <div class="tc-tags">
+    <span class="tc-tag tc-tag-lang">Deep Learning</span>
+    <span class="tc-tag tc-tag-fw">Text Classification</span>
+    <span class="tc-tag tc-tag-use">Clinical · Research</span>
+  </div>
+  <p style="margin: 0.4rem 0 0; font-size: 0.82rem;">🔗 <a href="https://huggingface.co/KevSun/mentalhealth_LM" style="color: #4f46e5; font-weight: 600;">HuggingFace Hub →</a></p>
+</div>
+
+<div class="tool-card">
+  <div class="tc-header">
+    <div class="tc-icon tc-icon-blue">📝</div>
+    <div class="tc-name">IELTS & L2 Essay Grading Models <span class="tc-badge badge-dl">⬇ 120K+ downloads</span></div>
+  </div>
+  <div class="tc-desc">Automated multi-dimensional essay scoring system for English language learners, covering grammar, coherence, vocabulary, and task response.</div>
+  <div class="tc-tags">
+    <span class="tc-tag tc-tag-lang">Fine-tuned LLMs</span>
+    <span class="tc-tag tc-tag-fw">Multi-dim Scoring</span>
+    <span class="tc-tag tc-tag-use">Education · IELTS · L2</span>
+  </div>
+  <p style="margin: 0.4rem 0 0; font-size: 0.82rem;">🔗 <a href="https://huggingface.co/KevSun/Engessay_grading_ML" style="color: #4f46e5; font-weight: 600;">HuggingFace Hub →</a></p>
+</div>
+
+<div class="tool-card">
+  <div class="tc-header">
+    <div class="tc-icon tc-icon-amber">✍️</div>
+    <div class="tc-name">English Writing Diagnostic LLMs</div>
+  </div>
+  <div class="tc-desc">Generative models for providing detailed, multi-aspect feedback on English writing. Built for IELTS preparation and ESL education contexts.</div>
+  <div class="tc-tags">
+    <span class="tc-tag tc-tag-lang">Generative LLMs</span>
+    <span class="tc-tag tc-tag-fw">Educational NLP</span>
+    <span class="tc-tag tc-tag-use">IELTS · ESL</span>
   </div>
 </div>
 
-<div class="archive__item">
-  <h3>Fine-tuned Large Language Models</h3>
-  <div class="archive__item-body">
-    <ul>
-      <li><strong>Personality Detection LLMs</strong>
-        <br><em>Fine-tuned language models for detecting personality traits from text</em>
-        <br>🔧 <strong>Technologies:</strong> PyTorch, Transformers, BERT/RoBERTa
-        <br>📊 <strong>Impact:</strong> <span class="notice--success">60K+ downloads in 2 months</span>
-        <br>🔗 <strong>Available:</strong> <a href="https://huggingface.co/KevSun/Personality_LM">HuggingFace Hub</a></li>
-      
-      <li><strong>Mental Health Detection Models</strong>
-        <br><em>Specialized LLMs for detecting mental health indicators from text and social media</em>
-        <br>🔧 <strong>Technologies:</strong> Deep Learning, Text Classification
-        <br>📊 <strong>Use Case:</strong> Clinical and research applications</li>
-      
-      <li><strong>IELTS & L2 Essay Grading Models</strong>
-        <br><em>Automated essay scoring system for English language learners</em>
-        <br>🔧 <strong>Technologies:</strong> Fine-tuned LLMs, Multi-dimensional Scoring
-        <br>📊 <strong>Use Case:</strong> Educational assessment and feedback</li>
-      
-      <li><strong>English Writing Diagnostic LLMs</strong>
-        <br><em>Generative models for providing detailed feedback on English writing</em>
-        <br>🔧 <strong>Technologies:</strong> GPT-based Models, Educational NLP
-        <br>📊 <strong>Use Case:</strong> IELTS preparation and ESL education</li>
-    </ul>
+<!-- ═══════════ DISCOURSE TOOLS ═══════════ -->
+<div class="sw-section">🔧 Discourse Analysis Tools</div>
+
+<div class="tool-card">
+  <div class="tc-header">
+    <div class="tc-icon tc-icon-purple">🔄</div>
+    <div class="tc-name">Automatic Discourse Dependency Converter</div>
+  </div>
+  <div class="tc-desc">Converts discourse dependency structures from various corpora formats. Supports cross-framework conversion between RST, PDTB, and dependency representations.</div>
+  <div class="tc-tags">
+    <span class="tc-tag tc-tag-lang">Python</span>
+    <span class="tc-tag tc-tag-fw">NLP Libraries</span>
+    <span class="tc-tag tc-tag-use">Discourse Parsing · Multilingual</span>
   </div>
 </div>
 
-<div class="archive__item">
-  <h3>Integrated Analysis Platforms</h3>
-  <div class="archive__item-body">
-    <ul>
-      <li><strong>LLM-based Automatic Linguistic Analysis Software</strong>
-        <br><em>Comprehensive synthesis software for automatic linguistic analysis using large language models</em>
-        <br>🔧 <strong>Technologies:</strong> LLMs, Multi-modal Analysis, API Integration
-        <br>📊 <strong>Use Case:</strong> End-to-end linguistic research pipeline</li>
-    </ul>
+<div class="tool-card">
+  <div class="tc-header">
+    <div class="tc-icon tc-icon-blue">📐</div>
+    <div class="tc-name">Discourse Complexity Analyzer</div>
+  </div>
+  <div class="tc-desc">Measures discourse complexity at both syntactic and discourse levels. Used for automated text complexity assessment and readability analysis.</div>
+  <div class="tc-tags">
+    <span class="tc-tag tc-tag-lang">Python</span>
+    <span class="tc-tag tc-tag-fw">Statistical Modeling</span>
+    <span class="tc-tag tc-tag-use">Text Complexity</span>
+  </div>
+</div>
+
+<div class="tool-card">
+  <div class="tc-header">
+    <div class="tc-icon tc-icon-green">🏷️</div>
+    <div class="tc-name">Unified PDTB & RST Annotation Tool</div>
+  </div>
+  <div class="tc-desc">Mining tool for extracting and aligning discourse relations from Penn Discourse TreeBank and Rhetorical Structure Theory corpora.</div>
+  <div class="tc-tags">
+    <span class="tc-tag tc-tag-lang">Python</span>
+    <span class="tc-tag tc-tag-fw">XML Processing</span>
+    <span class="tc-tag tc-tag-use">Discourse Relations</span>
+  </div>
+</div>
+
+<div class="tool-card">
+  <div class="tc-header">
+    <div class="tc-icon tc-icon-rose">🕸️</div>
+    <div class="tc-name">Discourse Network Visualization Toolkit</div>
+  </div>
+  <div class="tc-desc">Interactive visualization for discourse networks and structural relationships. Generates network graphs and structural analyses of discourse.</div>
+  <div class="tc-tags">
+    <span class="tc-tag tc-tag-lang">Python</span>
+    <span class="tc-tag tc-tag-fw">D3.js</span>
+    <span class="tc-tag tc-tag-fw">NetworkX</span>
+    <span class="tc-tag tc-tag-use">Visual Analysis</span>
+  </div>
+</div>
+
+<!-- ═══════════ COMPUTATIONAL METRICS ═══════════ -->
+<div class="sw-section">📏 Computational Linguistics Metrics</div>
+
+<div class="tool-card">
+  <div class="tc-header">
+    <div class="tc-icon tc-icon-amber">👁️</div>
+    <div class="tc-name">Attention-Aware Computational Measures Toolkit <span class="tc-badge badge-pub">Published in Cognition & Linguistics</span></div>
+  </div>
+  <div class="tc-desc">Advanced toolkit for computing attention-aware semantic relevance metrics. Predicts human reading behavior and cognitive processing across multiple languages.</div>
+  <div class="tc-tags">
+    <span class="tc-tag tc-tag-lang">Python</span>
+    <span class="tc-tag tc-tag-fw">PyTorch</span>
+    <span class="tc-tag tc-tag-fw">Transformers</span>
+    <span class="tc-tag tc-tag-use">Eye-tracking · Reading · Cognition</span>
+  </div>
+</div>
+
+<div class="tool-card">
+  <div class="tc-header">
+    <div class="tc-icon tc-icon-blue">🌍</div>
+    <div class="tc-name">Enhanced Computational Measures Toolkit</div>
+  </div>
+  <div class="tc-desc">Comprehensive suite of enhanced computational measures for multilingual analysis, covering semantic similarity, information-theoretic metrics, and surprisal.</div>
+  <div class="tc-tags">
+    <span class="tc-tag tc-tag-lang">Python</span>
+    <span class="tc-tag tc-tag-fw">Advanced NLP</span>
+    <span class="tc-tag tc-tag-use">Cross-linguistic Analysis</span>
+  </div>
+</div>
+
+<!-- ═══════════ INTEGRATED PLATFORMS ═══════════ -->
+<div class="sw-section">🚀 Integrated Analysis Platforms</div>
+
+<div class="tool-card">
+  <div class="tc-header">
+    <div class="tc-icon tc-icon-purple">🔬</div>
+    <div class="tc-name">LLM-based Automatic Linguistic Analysis Software</div>
+  </div>
+  <div class="tc-desc">End-to-end synthesis software for automatic linguistic analysis using large language models. Provides a comprehensive pipeline from data ingestion to analysis output.</div>
+  <div class="tc-tags">
+    <span class="tc-tag tc-tag-lang">LLMs</span>
+    <span class="tc-tag tc-tag-fw">Multi-modal</span>
+    <span class="tc-tag tc-tag-fw">API Integration</span>
+    <span class="tc-tag tc-tag-use">Research Pipeline</span>
+  </div>
+</div>
+
+<div class="tool-card">
+  <div class="tc-header">
+    <div class="tc-icon tc-icon-green">🌐</div>
+    <div class="tc-name">AI Agent for Literary & Scholarly Translation</div>
+  </div>
+  <div class="tc-desc">AI translation agent for ZH-EN and EN-ZH literary and scholarly texts. Optimized for domain-specific vocabulary and stylistic nuance preservation.</div>
+  <div class="tc-tags">
+    <span class="tc-tag tc-tag-lang">LLMs</span>
+    <span class="tc-tag tc-tag-fw">Agentic AI</span>
+    <span class="tc-tag tc-tag-use">Translation · DH</span>
+  </div>
+</div>
+
+<div class="tool-card">
+  <div class="tc-header">
+    <div class="tc-icon tc-icon-amber">📖</div>
+    <div class="tc-name">Synthesis Pipeline for Philological Research</div>
+  </div>
+  <div class="tc-desc">Automatic linguistic annotation pipeline applicable to philological research. Generates multi-layer annotations for historical and literary texts.</div>
+  <div class="tc-tags">
+    <span class="tc-tag tc-tag-lang">Python</span>
+    <span class="tc-tag tc-tag-fw">LLMs</span>
+    <span class="tc-tag tc-tag-use">Philology · DH</span>
   </div>
 </div>
 
 <hr>
 
-<h2>📊 Databases & Corpora</h2>
+<!-- ═══════════ DATABASES & CORPORA ═══════════ -->
+<div class="sw-section">📊 Databases</div>
 
-<div class="archive__item">
-  <h3>Historical Language Databases</h3>
-  <div class="archive__item-body">
-    <ul>
-      <li><strong>Historical Discourse Connectives Database</strong>
-        <br><em>Comprehensive database of discourse connective frequencies across multiple languages (1820-2010)</em>
-        <br>🌍 <strong>Coverage:</strong> Multiple languages, 190-year span
-        <br>📊 <strong>Applications:</strong> Historical linguistics, language evolution studies</li>
-      
-      <li><strong>Historical Psychosemantic Dimensions Database</strong>
-        <br><em>Norms database for historical psychosemantic dimensions in English</em>
-        <br>📊 <strong>Applications:</strong> Cognitive linguistics, semantic change analysis</li>
-      
-      <li><strong>Multilingual Onomatopoeia Sentiment Database</strong>
-        <br><em>Database of sentimental properties of onomatopoeia across 28 languages</em>
-        <br>🌍 <strong>Coverage:</strong> 28 languages
-        <br>📊 <strong>Applications:</strong> Cross-linguistic sentiment analysis</li>
-    </ul>
+<div class="db-card">
+  <div class="db-icon">📅</div>
+  <div class="db-body">
+    <div class="db-name">Historical Discourse Connectives Database</div>
+    <div class="db-desc">Comprehensive database of discourse connective frequencies across multiple languages spanning 190 years (1820–2010).</div>
+    <div class="db-meta">
+      <span class="tc-tag tc-tag-use">Multiple Languages</span>
+      <span class="tc-tag tc-tag-use">190-year Span</span>
+      <span class="tc-tag tc-tag-use">Historical Linguistics</span>
+    </div>
   </div>
 </div>
 
-<div class="archive__item">
-  <h3>Specialized Corpora</h3>
-  <div class="archive__item-body">
-    <ul>
-      <li><strong>English Hyphenated Compounds Corpus</strong>
-        <br><em>Comprehensive corpus of English hyphenated compound words</em>
-        <br>📊 <strong>Applications:</strong> Morphological analysis, compound processing studies</li>
-      
-      <li><strong>Multilingual Discourse Dependency Corpus</strong>
-        <br><em>Balanced corpus with discourse dependency annotations across 11 languages</em>
-        <br>🌍 <strong>Coverage:</strong> 11 languages
-        <br>📊 <strong>Applications:</strong> Cross-linguistic discourse analysis</li>
-      
-      <li><strong>Chinese Textual "Run-on" Sentences Corpus (CCTRS)</strong>
-        <br><em>Specialized corpus with multiple-layer annotations for Chinese run-on sentences</em>
-        <br>🔧 <strong>Features:</strong> Multi-layer linguistic annotations
-        <br>📊 <strong>Applications:</strong> Chinese syntax and discourse research
-        <br><span class="notice--info">📖 <strong>Published:</strong> ACL Conference 2022</span></li>
-    </ul>
+<div class="db-card">
+  <div class="db-icon">🧪</div>
+  <div class="db-body">
+    <div class="db-name">Historical Psychosemantic Dimensions Database</div>
+    <div class="db-desc">Norms of historical psychosemantic dimensions in English for studying cognitive and semantic change over time.</div>
+    <div class="db-meta">
+      <span class="tc-tag tc-tag-use">English</span>
+      <span class="tc-tag tc-tag-use">Cognitive Linguistics</span>
+      <span class="tc-tag tc-tag-use">Semantic Change</span>
+    </div>
+  </div>
+</div>
+
+<div class="db-card">
+  <div class="db-icon">🎵</div>
+  <div class="db-body">
+    <div class="db-name">Multilingual Onomatopoeia Sentiment Database</div>
+    <div class="db-desc">Sentimental properties of onomatopoeia across 28 languages for cross-linguistic sentiment and sound symbolism research.</div>
+    <div class="db-meta">
+      <span class="tc-tag tc-tag-fw">28 Languages</span>
+      <span class="tc-tag tc-tag-use">Sentiment Analysis</span>
+      <span class="tc-tag tc-tag-use">Sound Symbolism</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ CORPORA ═══════════ -->
+<div class="sw-section">📚 Specialized Corpora</div>
+
+<div class="db-card">
+  <div class="db-icon">🔗</div>
+  <div class="db-body">
+    <div class="db-name">Multilingual Discourse Dependency Corpus</div>
+    <div class="db-desc">Balanced corpus with discourse dependency annotations across 11 languages for cross-linguistic discourse research.</div>
+    <div class="db-meta">
+      <span class="tc-tag tc-tag-fw">11 Languages</span>
+      <span class="tc-tag tc-tag-use">Discourse Dependencies</span>
+    </div>
+  </div>
+</div>
+
+<div class="db-card">
+  <div class="db-icon">🇨🇳</div>
+  <div class="db-body">
+    <div class="db-name">Chinese Textual "Run-on" Sentences Corpus (CCTRS) <span class="tc-badge badge-pub">ACL 2022</span></div>
+    <div class="db-desc">Specialized corpus with multi-layer annotations for Chinese run-on sentences, covering syntactic, semantic, and discourse layers.</div>
+    <div class="db-meta">
+      <span class="tc-tag tc-tag-lang">Multi-layer Annotations</span>
+      <span class="tc-tag tc-tag-use">Chinese Discourse</span>
+    </div>
+  </div>
+</div>
+
+<div class="db-card">
+  <div class="db-icon">➖</div>
+  <div class="db-body">
+    <div class="db-name">English Hyphenated Compounds Corpus</div>
+    <div class="db-desc">Comprehensive corpus of English hyphenated compound words for morphological analysis and compound processing studies.</div>
+    <div class="db-meta">
+      <span class="tc-tag tc-tag-use">English</span>
+      <span class="tc-tag tc-tag-use">Morphology</span>
+      <span class="tc-tag tc-tag-use">Compounds</span>
+    </div>
   </div>
 </div>
 
 <hr>
 
-<h2>🎯 Technical Specifications</h2>
+<!-- ═══════════ TECH STACK ═══════════ -->
+<div class="sw-section">🏗️ Technical Stack</div>
 
-<div class="notice--warning">
-  <h3>Programming Languages & Technologies</h3>
-  <ul>
-    <li><strong>Advanced:</strong> Python, R, PyTorch, LaTeX, Linux Shell</li>
-    <li><strong>Intermediate:</strong> JavaScript, HTML, CSS</li>
-    <li><strong>Frameworks:</strong> Transformers, Hugging Face, TensorFlow, scikit-learn</li>
-    <li><strong>Databases:</strong> SQL, NoSQL, Graph databases</li>
-    <li><strong>Visualization:</strong> D3.js, Matplotlib, ggplot2, Plotly</li>
-  </ul>
-</div>
-
-<div class="notice--success">
-  <h3>Research Impact</h3>
-  <ul>
-    <li>🔬 <strong>Open Source Contributions:</strong> 10+ major software packages</li>
-    <li>💾 <strong>Datasets Created:</strong> 15+ specialized corpora and databases</li>
-    <li>🤖 <strong>ML Models Released:</strong> 5+ fine-tuned LLMs with 60K+ downloads</li>
-    <li>🌐 <strong>Multi-language Support:</strong> Tools supporting 28+ languages</li>
-    <li>📈 <strong>Community Usage:</strong> Tools used by researchers worldwide</li>
-  </ul>
+<div class="tech-grid">
+  <div class="tech-box">
+    <div class="tb-title">Languages</div>
+    <div class="tb-items">Python · R · PyTorch · LaTeX · Linux Shell · JavaScript · HTML</div>
+  </div>
+  <div class="tech-box">
+    <div class="tb-title">Frameworks</div>
+    <div class="tb-items">Transformers · Hugging Face · TensorFlow · scikit-learn · spaCy</div>
+  </div>
+  <div class="tech-box">
+    <div class="tb-title">Visualization</div>
+    <div class="tb-items">D3.js · Matplotlib · ggplot2 · Plotly · NetworkX</div>
+  </div>
+  <div class="tech-box">
+    <div class="tb-title">Data</div>
+    <div class="tb-items">SQL · NoSQL · Graph Databases · Pandas · Corpus Tools</div>
+  </div>
+  <div class="tech-box">
+    <div class="tb-title">Experimentation</div>
+    <div class="tb-items">Eye-tracker · EEG · fMRI · E-Prime · Online Experiments</div>
+  </div>
+  <div class="tech-box">
+    <div class="tb-title">Statistics</div>
+    <div class="tb-items">GAMM · Bayesian · Mixed-effects · Time-series · Causal Inference</div>
+  </div>
 </div>
 
 <hr>
 
-<h2>🔗 Access & Collaboration</h2>
+<!-- ═══════════ LINKS ═══════════ -->
+<div class="sw-section">🔗 Find My Work Online</div>
 
-<div class="notice--info">
-  <p><strong>Research Collaboration:</strong> I'm always interested in collaborating on computational linguistics projects and sharing resources with the research community. Please feel free to reach out for:</p>
-  <ul>
-    <li>Access to specialized datasets and corpora</li>
-    <li>Collaboration on tool development</li>
-    <li>Custom model fine-tuning for specific research needs</li>
-    <li>Technical consultation on computational linguistics projects</li>
-  </ul>
+<div class="sw-links">
+  <a class="sw-link" href="https://github.com/fivehills">
+    <span class="sl-icon">💻</span>GitHub
+    <span class="sl-sub">@fivehills</span>
+  </a>
+  <a class="sw-link" href="https://huggingface.co/KevSun">
+    <span class="sl-icon">🤗</span>Hugging Face
+    <span class="sl-sub">@KevSun</span>
+  </a>
+  <a class="sw-link" href="https://osf.io/4ujnx">
+    <span class="sl-icon">📂</span>OSF
+    <span class="sl-sub">Open Science</span>
+  </a>
+  <a class="sw-link" href="https://scholar.google.com/citations?user=zE_8aHUAAAAJ&hl=en">
+    <span class="sl-icon">📊</span>Google Scholar
+    <span class="sl-sub">Citations</span>
+  </a>
 </div>
 
-<h3>Find My Work Online</h3>
-<ul>
-  <li>🐙 <strong>GitHub:</strong> <a href="https://github.com/fivehills">@fivehills</a></li>
-  <li>🤗 <strong>Hugging Face:</strong> <a href="https://huggingface.co/KevSun">@KevSun</a></li>
-  <li>📊 <strong>OSF:</strong> <a href="https://osf.io/4ujnx">Open Science Framework</a></li>
-  <li>📈 <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=zE_8aHUAAAAJ&hl=en">Citation Profile</a></li>
-</ul>
-
-<hr>
-
-<div class="notice--success">
-  <p><em>All software and datasets are developed following open science principles and are freely available for academic research. If you use any of these resources in your research, please cite the corresponding publications.</em></p>
+<!-- ═══════════ CTA ═══════════ -->
+<div class="sw-cta">
+  <em>"All software and datasets follow open science principles and are freely available for academic research."</em><br>
+  Interested in <strong>collaboration</strong>, <strong>custom model fine-tuning</strong>, or <strong>dataset access</strong>? Feel free to reach out.
 </div>
