@@ -310,7 +310,7 @@ My work sits at the cutting edge of **computational linguistics** and **cognitiv
   <div class="research-card">
     <div class="card-icon">📜</div>
     <h4>Digital Humanities & Computational Text Analysis</h4>
-    <p>Formal and computational models of discourse structure; computational measurement of coherence, cohesion, and information flow; graph-based and network representations of discourse; discourse dependency and cross-framework conversion (RST, PDTB, dependency); multilingual discourse parsing; distant reading and large-scale diachronic analysis of literary and scholarly texts; computational modeling of lexical semantic change and language evolution.</p>
+    <p>Formal and computational models of discourse structure; computational measurement of coherence, cohesion, and information flow; discourse dependency and cross-framework conversion (RST, PDTB, dependency); multilingual discourse parsing; distant reading.</p>
   </div>
   <div class="research-card">
     <div class="card-icon">⚖️</div>
