@@ -342,7 +342,8 @@ My work sits at the cutting edge of **computational linguistics** and **cognitiv
 
 <div class="badge-row">
   <span class="badge"><span class="badge-dot"></span>Review Editor · Frontiers in Psychology</span>
-  <span class="badge"><span class="badge-dot"></span>Editorial Board · Scientific Reports</span>
+  <span class="badge"><span class="badge-dot"></span>Editorial Board · Scientific Reports （journal published by Nature）</span>
+   <span class="badge"><span class="badge-dot"></span>Editorial Board · Humanites and Social Communications (journal published by Nature)</span>
   <span class="badge"><span class="badge-dot"></span>Editorial Board · BMC Psychology</span>
 </div>
 
