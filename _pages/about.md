@@ -272,7 +272,7 @@ I am the **Director of the Institute of AI and Language Science** and a **Full T
     <div class="stat-label">Chinese CSSCI Publications</div>
   </div>
   <div class="stat-card">
-    <div class="stat-number">3</div>
+    <div class="stat-number">4</div>
     <div class="stat-label">Editorial Board Roles</div>
   </div>
   <div class="stat-card">
