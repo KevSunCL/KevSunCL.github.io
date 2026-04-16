@@ -264,12 +264,12 @@ I am the **Director of the Institute of AI and Language Science** and a **Full T
 <!-- ═══════════ STATS AT A GLANCE ═══════════ -->
 <div class="stats-row">
   <div class="stat-card">
-    <div class="stat-number">30+</div>
+    <div class="stat-number">60+</div>
     <div class="stat-label">International Journal Publications</div>
   </div>
   <div class="stat-card">
-    <div class="stat-number">10+</div>
-    <div class="stat-label">Chinese CSSCI Publications</div>
+    <div class="stat-number">6+</div>
+    <div class="stat-label">Programming Languages</div>
   </div>
   <div class="stat-card">
     <div class="stat-number">4</div>
