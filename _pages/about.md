@@ -350,7 +350,7 @@ My work sits at the cutting edge of **computational linguistics** and **cognitiv
 <!-- ═══════════ IMPACT & RECOGNITION ═══════════ -->
 <h2 class="section-title">🏆 Impact & Recognition</h2>
 
-My research has led to **30+ peer-reviewed journal publications** in top-tier international venues including *Cognition*, *Cognitive Science*, *Linguistics*, *Neural Networks*, and *PNAS*, 10  confernce papers in ACL and other AI top conferences, as well as **10+ publications** in leading Chinese CSSCI journals such as *中国语文* and *当代语言学*. Many of my works have been reprinted in *人大复印资料* and *中国社会科学文摘*. My research has been featured in **MIT Technology Review**.
+My research has led to **30+ peer-reviewed journal publications** in top-tier international venues including *Cognition*, *Cognitive Science*, *Linguistics*, *Neural Networks*, and *PNAS*, and **10  confernce papers** in ACL and other AI top conferences, as well as **10+ publications** in leading Chinese CSSCI journals such as *中国语文* and *当代语言学*. Many of my works have been reprinted in *人大复印资料* and *中国社会科学文摘*. My research has been featured in **MIT Technology Review**.
 
 <!-- ═══════════ TECHNICAL EXPERTISE ═══════════ -->
 <h2 class="section-title">💻 Technical Expertise</h2>
