@@ -259,7 +259,7 @@ redirect_from:
   <div class="hero-affiliation">Director, Institute of AI and Language Science · School of Foreign Languages, Tongji University</div>
 </div>
 
-I am the **Director of the Institute of AI and Language Science** and a **Full Tenured Professor of Computational Linguistics** in the School of Foreign Languages at Tongji University. I explore the fascinating intersection of **computational linguistics**, **cognitive computation**, and **artificial intelligence**. My research bridges the gap between human language processing and machine learning, integrating statistical modeling, deep learning, and cognitive-neuroscience experimental methods to understand the deep mechanisms of language understanding and processing in both humans and machines. I have developed a number of specialized large language models, as well as major databases and corpora, widely used in academia and industry. As global efforts accelerate in "AI + Education", I am committed to applying data-driven approaches to advance language research toward big language science.
+I am the **Director of the Institute of AI and Language Science** and a **Full Tenured Professor of Computational Linguistics** in the School of Foreign Languages at Tongji University. My work explores the intersection of **computational linguistics**, **cognitive computation**, **speech and language technologies**, and **artificial intelligence**. My research investigates how humans and machines process language by combining statistical modeling, deep learning, large language models, speech self-supervised learning, and cognitive-neuroscience methods such as eye-tracking, EEG, and fMRI. I am especially interested in building interpretable computational measures, such as contextual fit, that connect machine representations with human behavioral and neural dynamics. I have developed specialized large language models, speech/language analysis methods, major databases, and corpora that are used in both academia and industry. As global efforts in **AI + Education** continue to grow, I am committed to using data-driven and cognitively grounded AI approaches to advance language research toward **big language science**.
 
 <!-- ═══════════ STATS AT A GLANCE ═══════════ -->
 <div class="stats-row">
@@ -384,12 +384,13 @@ My research has led to **30+ peer-reviewed journal publications** in top-tier in
 <!-- ═══════════ CURRENT PROJECTS ═══════════ -->
 <h2 class="section-title">🚀 Current Projects</h2>
 
-I'm currently working on groundbreaking projects that combine **cognitive neuroscience** with **artificial intelligence** to understand how humans and machines process language:
+I'm currently working on projects that combine **cognitive neuroscience**, **artificial intelligence**, and **speech/language modeling** to understand how humans and machines process language:
 
-- Large Language Model reasoning and evaluation frameworks
-- Cognitive computation models for brain-inspired AI
-- Advanced statistical approaches to linguistic and cognitive data using GAMM and Bayesian methods
-- Cross-linguistic and multi-modal studies of affective computing
+- Large Language Model reasoning and evaluation frameworks, including methods that separate prediction from contextual fit in model readouts
+- Cognitive computation models for brain-inspired AI, with a focus on how contextual compatibility shapes language processing
+- Sparse localization of Mandarin lexical tone representations in speech self-supervised learning models
+- Advanced statistical approaches to linguistic, prosodic, and cognitive data using GAMM, Bayesian methods, and cross-domain model comparison
+- Cross-linguistic and multi-modal studies of affective computing, including how affect representation and expression decouple across alignment stages
 
 <!-- ═══════════ CONTACT CTA ═══════════ -->
 <div class="cta-box">
