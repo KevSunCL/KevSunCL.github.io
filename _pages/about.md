@@ -355,6 +355,7 @@ My research investigates **how language and contextual meaning are represented a
 
 </div>
 
+
 <!-- ═══════════ CAREER TIMELINE ═══════════ -->
 <h2 class="section-title">🎓 Academic Positions</h2>
 
@@ -413,6 +414,12 @@ My research has led to **30+ peer-reviewed journal publications** in top-tier in
     <div class="skill-bar"><div class="skill-fill" style="width: 60%"></div></div>
   </div>
 </div>
+<h3>Methods</h3>
+<p>
+Statistical modeling · GAMMs · Bayesian methods · Deep learning ·
+LLM probing and representation analysis · Eye-tracking · EEG · fMRI ·
+Speech self-supervised learning
+</p>
 
 **Experimental Methods**: Eye-tracking · EEG · fMRI · Online experiments  
 **Languages**: Chinese (native) · English (fluent) · German (intermediate) · Japanese (intermediate)
