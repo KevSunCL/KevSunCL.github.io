@@ -259,7 +259,11 @@ redirect_from:
   <div class="hero-affiliation">Director, Institute of AI and Language Science · School of Foreign Languages, Tongji University</div>
 </div>
 
-I am the **Director of the Institute of AI and Language Science** and a **Full Tenured Professor of Computational Linguistics** in the School of Foreign Languages at Tongji University. My work explores the intersection of **computational linguistics**, **cognitive computation**, **speech and language technologies**, and **artificial intelligence**. My research investigates how humans and machines process language by combining statistical modeling, deep learning, large language models, speech self-supervised learning, and cognitive-neuroscience methods such as eye-tracking, EEG, and fMRI. I am especially interested in building interpretable computational measures, such as contextual fit, that connect machine representations with human behavioral and neural dynamics. I have developed specialized large language models, speech/language analysis methods, major databases, and corpora that are used in both academia and industry. As global efforts in **AI + Education** continue to grow, I am committed to using data-driven and cognitively grounded AI approaches to advance language research toward **big language science**.
+I am the **Director of the Institute of AI and Language Science** and a **Full Tenured Professor of Computational Linguistics** at Tongji University. My research investigates **how language and contextual meaning are represented and processed in human and artificial intelligence**, bridging computational linguistics, cognitive science, and AI.
+
+My work centers on three interconnected areas: **computational language and human cognition**, **language intelligence in AI**, and **human–AI cognitive alignment**. I combine computational modeling and large language models with behavioral and cognitive-neuroscience methods, including eye-tracking, EEG, and fMRI, to study language comprehension and representation across humans and machines. A particular focus is the development of **interpretable computational measures** that connect linguistic structure and context with machine representations and human behavioral and neural dynamics.
+
+More broadly, I aim to develop a **cognitively grounded science of language and AI** that uses insights from human language and cognition to understand, evaluate, and improve artificial intelligence.
 
 <!-- ═══════════ STATS AT A GLANCE ═══════════ -->
 <div class="stats-row">
@@ -284,39 +288,71 @@ I am the **Director of the Institute of AI and Language Science** and a **Full T
 <!-- ═══════════ RESEARCH FOCUS ═══════════ -->
 <h2 class="section-title">🔬 Research Focus</h2>
 
-My work sits at the cutting edge of **computational linguistics** and **cognitive AI**, where I develop novel computational methods to understand human language processing and machine intelligence.
+My research investigates **how language and contextual meaning are represented and processed in human and artificial intelligence**. It spans three core themes—**computational language and human cognition**, **language intelligence in AI**, and **human–AI cognitive alignment**—with complementary work in speech, computational discourse, and responsible AI.
 
 <div class="research-grid">
+
   <div class="research-card">
     <div class="card-icon">🧠</div>
-    <h4>Cognitive Computation & Brain-inspired AI</h4>
-    <p>Developing computational models that explain how humans process language, using eye-tracking, EEG, and fMRI data to understand the neural mechanisms of discourse comprehension.</p>
+    <h4>Computational Language & Human Cognition</h4>
+    <p>
+      Developing interpretable computational models of language comprehension,
+      prediction, semantic integration, and discourse processing, using behavioral,
+      eye-tracking, EEG, and fMRI evidence.
+    </p>
   </div>
+
   <div class="research-card">
     <div class="card-icon">🤖</div>
-    <h4>Large Language Models & Reasoning</h4>
-    <p>Evaluating and enhancing LLM reasoning capabilities, fine-tuning transformer-based models, and developing attention-aware computational metrics for multi-modal language processing.</p>
+    <h4>Language Intelligence in AI</h4>
+    <p>
+      Investigating the linguistic, pragmatic, and reasoning capabilities of large
+      language models, including their internal representations, contextual
+      generalization, and mechanisms of language understanding.
+    </p>
   </div>
+
   <div class="research-card">
-    <div class="card-icon">💭</div>
-    <h4>Affective Computing</h4>
-    <p>Understanding emotion and sentiment in human language through computational approaches, bridging cognitive and affective dimensions of language.</p>
+    <div class="card-icon">🔗</div>
+    <h4>Human–AI Cognitive Alignment</h4>
+    <p>
+      Comparing human behavioral and neural dynamics with representations and
+      computations in artificial models to identify where human and machine
+      language processing converge and diverge.
+    </p>
   </div>
+
   <div class="research-card">
-    <div class="card-icon">📊</div>
-    <h4>Advanced Statistical Analysis</h4>
-    <p>Applying sophisticated statistical methods including GAMM, Bayesian modeling, and time-series analysis to linguistic and cognitive phenomena, as well as neuro data (EEG and fMRI).</p>
+    <div class="card-icon">🎙️</div>
+    <h4>Speech & Multimodal Language Processing</h4>
+    <p>
+      Studying spoken-language processing through computational modeling,
+      self-supervised speech representations, prosody, and multimodal signals,
+      with a focus on links between linguistic structure and human cognition.
+    </p>
   </div>
+
   <div class="research-card">
     <div class="card-icon">📜</div>
-    <h4>Digital Humanities & Computational Text Analysis</h4>
-    <p>Formal and computational models of discourse structure; computational measurement of coherence, cohesion, and information flow; discourse dependency and cross-framework conversion (RST, PDTB, dependency); multilingual discourse parsing; distant reading.</p>
+    <h4>Computational Discourse & Digital Humanities</h4>
+    <p>
+      Developing computational approaches to discourse structure, coherence,
+      information flow, language change, and large-scale text analysis across
+      languages, genres, and historical corpora.
+    </p>
   </div>
+
   <div class="research-card">
     <div class="card-icon">⚖️</div>
-    <h4>AI Methods, Ethics & Didactics</h4>
-    <p>Efficient training and inference in LLMs; evaluations and benchmarking of AI models; cognitive-inspired reasoning in LLMs; critical assessment of AI biases, cultural tendencies, and societal impacts; development of DH-related curricula integrating AI literacy and ethical reflection.</p>
+    <h4>Responsible AI, Evaluation & Language Education</h4>
+    <p>
+      Evaluating AI systems for linguistic competence, cognitive and cultural
+      biases, and human alignment, while translating computational language
+      research into responsible applications in language education and digital
+      scholarship.
+    </p>
   </div>
+
 </div>
 
 <!-- ═══════════ CAREER TIMELINE ═══════════ -->
@@ -384,13 +420,17 @@ My research has led to **30+ peer-reviewed journal publications** in top-tier in
 <!-- ═══════════ CURRENT PROJECTS ═══════════ -->
 <h2 class="section-title">🚀 Current Projects</h2>
 
-I'm currently working on projects that combine **cognitive neuroscience**, **artificial intelligence**, and **speech/language modeling** to understand how humans and machines process language:
+My current projects examine **language and contextual meaning across human and artificial intelligence**, connecting computational modeling, cognitive neuroscience, large language models, and speech technologies:
 
-- Large Language Model reasoning and evaluation frameworks, including methods that separate prediction from contextual fit in model readouts
-- Cognitive computation models for brain-inspired AI, with a focus on how contextual compatibility shapes language processing
-- Sparse localization of Mandarin lexical tone representations in speech self-supervised learning models
-- Advanced statistical approaches to linguistic, prosodic, and cognitive data using GAMM, Bayesian methods, and cross-domain model comparison
-- Cross-linguistic and multi-modal studies of affective computing, including how affect representation and expression decouple across alignment stages
+- **Contextual meaning in human language comprehension:** investigating how semantic relevance, contextual fit, and surprisal independently shape reading, speech processing, and neural dynamics using behavioral, eye-tracking, EEG, and fMRI data
+
+- **Language intelligence and internal representations in LLMs:** studying reasoning, pragmatics, contextual generalization, and internal representations through controlled evaluation, probing, and representation-level analysis
+
+- **Human–AI cognitive alignment:** comparing human behavioral and neural responses with computational measures and model representations to identify shared and divergent mechanisms of language processing
+
+- **Speech representations and linguistic structure:** investigating how speech self-supervised learning models encode linguistic information, including the sparse localization and representation of various linguistic expressions
+
+- **Affective and social language intelligence:** examining how humans and language models represent emotion, figurative meaning, politeness, and other socially situated aspects of language across languages and contexts.
 
 <!-- ═══════════ CONTACT CTA ═══════════ -->
 <div class="cta-box">
