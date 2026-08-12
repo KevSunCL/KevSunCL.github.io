@@ -255,11 +255,11 @@ redirect_from:
 <!-- ═══════════ HERO BANNER ═══════════ -->
 <div class="hero-banner">
   <h2>Kevin (Kun) Sun 孙坤</h2>
-  <div class="hero-subtitle">Full Tenured Professor of Computational Linguistics</div>
+  <div class="hero-subtitle">Professor of Computational Linguistics</div>
   <div class="hero-affiliation">Director, Institute of AI and Language Science · School of Foreign Languages, Tongji University</div>
 </div>
 
-I am the **Director of the Institute of AI and Language Science** and a **Full Tenured Professor of Computational Linguistics** at Tongji University. My research investigates **how language and contextual meaning are represented and processed in human and artificial intelligence**, bridging computational linguistics, cognitive science, and AI.
+I am the **Director of the Institute of AI and Language Science** and a **Professor of Computational Linguistics** at Tongji University. My research investigates **how language and contextual meaning are represented and processed in human and artificial intelligence**, bridging computational linguistics, cognitive science, and AI.
 
 My work centers on three interconnected areas: **computational language and human cognition**, **language intelligence in AI**, and **human–AI cognitive alignment**. I combine computational modeling and large language models with behavioral and cognitive-neuroscience methods, including eye-tracking, EEG, and fMRI, to study language comprehension and representation across humans and machines. A particular focus is the development of **interpretable computational measures** that connect linguistic structure and context with machine representations and human behavioral and neural dynamics.
 
