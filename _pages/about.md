@@ -288,8 +288,15 @@ More broadly, I aim to develop a **cognitively grounded science of language and 
 <!-- ═══════════ RESEARCH FOCUS ═══════════ -->
 <h2 class="section-title">🔬 Research Focus</h2>
 
-My research investigates **how language and contextual meaning are represented and processed in human and artificial intelligence**. It spans three core themes—**computational language and human cognition**, **language intelligence in AI**, and **human–AI cognitive alignment**—with complementary work in speech, computational discourse, and responsible AI.
 
+<div class="research-overview">
+  <img src="/images/research/research.png"
+       alt="Research framework">
+</div>
+
+<p>
+My research investigates **how language and contextual meaning are represented and processed in human and artificial intelligence**. It spans three core themes—**computational language and human cognition**, **language intelligence in AI**, and **human–AI cognitive alignment**—with complementary work in speech, computational discourse, and responsible AI.
+</p>
 <div class="research-grid">
 
   <div class="research-card">
